@@ -106,6 +106,36 @@ a:visited, .link-visited{
      color: #fff;
      background-color: grey;
 }
+.box{
+     width: 50px;
+     height: 50px;
+     border: 1px solid black;
+     display: inline-block;
+}
+.color-title-bar{
+     text-transform: uppercase;
+}
+
+/******************************************
+/* Colors                   
+/*******************************************/
+
+.white{
+     background-color: #fff;
+}
+.light-gray{
+     background-color: #e3e3de;
+}
+.med-gray{
+     background-color: #a7a5a0;
+}
+.dark-gray{
+     background-color: #535449;
+}
+.black{
+     background-color: #000;
+}
+
 
 /******************************************
 /* LAYOUT                   
@@ -124,11 +154,29 @@ header {
 footer {
 
 }
+.rotate {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+
+}
 
 /******************************************
 /* ADDITIONAL STYLES                   
 /*******************************************/
-
-
+#neutral{
+     overflow: hidden;
+}
+.color-title-bar{
+     float:left;
+     width: 20px;
+     height: 335px;
+     margin-right:10px;
+}
+.color-title-bar span{
+     display: inline-block;
+}
 
 
