@@ -77,7 +77,7 @@ button{
      font-style: italic;  
 }
 a{
-     color:red;
+     color:#dc1944;
 }
 a:hover,.link-hover{
      text-decoration: underline;
@@ -89,12 +89,12 @@ a:visited, .link-visited{
 
 .primary-btn{
      padding: 10px 10px 11px 10px;
-     color: red;
-     border: 3px solid red;
+     color: #dc1944;
+     border: 3px solid #dc1944;
 }
 .hover, .primary-btn:hover{
      color: #fff;
-     background-color: red;
+     background-color: #dc1944;
 }
 .secondary-btn{
      padding: 13px 13px 14px 13px;
@@ -135,6 +135,31 @@ a:visited, .link-visited{
 .black{
      background-color: #000;
 }
+.primary-red{
+     background-color: #dc1944;
+}
+.secondary-yellow{
+     background-color: #EDB521;
+}
+.secondary-purple{
+     background-color: #76546C;
+}
+.tertiary-orange{
+     background-color: #EE9521;
+}
+.tertiary-teal{
+     background-color: #2E9678;
+}
+.tertiary-blue{
+     background-color: #3074A6;
+}
+.tertiary-green{
+     background-color: #A0BB3B;
+}
+.tertiary-magenta{
+     background-color: #B25294;
+}
+
 
 
 /******************************************
@@ -148,7 +173,10 @@ a:visited, .link-visited{
 }
 
 header {
-
+     background-color: #76546C;
+     color: #e3e3de;
+     width: 100%;
+     padding-left: 12%;
 }
 
 footer {
@@ -160,7 +188,11 @@ footer {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
+}
 
+#colors div div div{
+     vertical-align: middle;
+     margin:1%;
 }
 
 /******************************************
@@ -174,9 +206,12 @@ footer {
      width: 20px;
      height: 335px;
      margin-right:10px;
+     padding-top: 16%;
 }
 .color-title-bar span{
      display: inline-block;
+     margin-left: -30px;
+     color:#a7a5a0;
 }
 
 
