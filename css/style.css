@@ -1,9 +1,13 @@
 /* 
-Project Name: Blank Template
-Client: Your Client
-Author: Your Name
-Developer @GA in NYC
+Project Name: Lootok Style Guide
+Client: Lootok
+Author: Kevin Tripp
 */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
 
 
 /******************************************
@@ -11,11 +15,6 @@ Developer @GA in NYC
 /*******************************************/
 
 /* Box Model Hack */
-* {
-     -moz-box-sizing: border-box; /* Firexfox */
-     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
-     box-sizing: border-box; /* IE */
-}
 
 /* Clear fix hack */
 .clearfix:after {
@@ -49,9 +48,22 @@ body {
      color: #000;
      font-size: 18px;
      line-height: 1.4;
-     font-family: "Times New Roman", Arial, sans-serif;
+     font-family: "helvetica", Arial, sans-serif;
+     padding-top: 46px;
+/*     font-family: "Times New Roman", Arial, sans-serif;*/
 }
-h1, h2, h3{
+  nav ul
+, .logo
+, #container {
+     width: 80%;
+     margin: 0 auto;
+}
+section{
+     margin:20px auto;
+}
+  h1
+, h2
+, h3{
      font-family: "franklin gothic";
 }
 h1{
@@ -79,10 +91,12 @@ button{
 a{
      color:#dc1944;
 }
-a:hover,.link-hover{
+  a:hover
+, .link-hover{
      text-decoration: underline;
 }
-a:visited, .link-visited{
+  a:visited
+, .link-visited{
      color: black;
      text-decoration: underline;
 }
@@ -92,7 +106,8 @@ a:visited, .link-visited{
      color: #dc1944;
      border: 3px solid #dc1944;
 }
-.hover, .primary-btn:hover{
+  .hover
+, .primary-btn:hover{
      color: #fff;
      background-color: #dc1944;
 }
@@ -102,7 +117,8 @@ a:visited, .link-visited{
      border: 3px solid grey;
 }
 
-.secondary-hover, .secondary-btn:hover{
+  .secondary-hover
+, .secondary-btn:hover{
      color: #fff;
      background-color: grey;
 }
@@ -117,13 +133,92 @@ a:visited, .link-visited{
 }
 
 /******************************************
+/* Nav                   
+/*******************************************/
+nav{
+     position: fixed;
+     top:0px;
+     width: 100%;
+     padding: 15px;
+     border-bottom: 10px solid rgba(245,244,243,.25);
+}
+  nav
+, nav ul li:hover ul{
+     -mox-background-clip: padding-box;
+     -webkit-background-clip: padding-box;
+     background-clip: padding-box;
+}
+
+nav ul li{
+     display: inline-block;
+     margin-right: 20px;
+     margin-bottom: 5px;
+}
+
+nav ul li ul{
+     display: none;
+     position: absolute;
+     width: 20%;
+     background-color: #e3e3de;
+     border: 10px solid rgba(245,244,243,.25);
+     border-top: 31px solid transparent;
+}
+nav ul li ul li{
+     padding-left: 20px;
+}
+
+
+nav ul li:hover > ul{
+     display: block;
+}
+nav ul li:hover > ul li{
+     width: 100%;
+}
+
+nav ul li:hover a{
+     text-decoration: none;
+}
+
+nav ul li a{
+     text-transform: uppercase;
+     text-decoration: none;
+}
+nav ul li ul li a{
+     text-transform: capitalize;
+}
+nav ul li:hover ul li ul{
+     display: block;
+     position: static;
+     font-style: italic;
+     border: none;
+     padding-top: 5px;
+     width: 100%;
+}
+nav ul li:hover ul li ul li ul li a{
+     color: red;
+}
+li i{
+     color: black;
+     left:22px;
+     top: 2px;
+     position: relative;
+}
+nav input{
+     border: none;
+     background: #f2f1ef;
+     width: 250px;
+     height:25px;
+}
+
+
+/******************************************
 /* Colors                   
 /*******************************************/
 
 .white{
      background-color: #fff;
 }
-.light-gray{
+.light-gray, nav{
      background-color: #e3e3de;
 }
 .med-gray{
@@ -159,35 +254,23 @@ a:visited, .link-visited{
 .tertiary-magenta{
      background-color: #B25294;
 }
-
-
-
 /******************************************
 /* LAYOUT                   
 /*******************************************/
-
-/* Center the container */
-#container {
-	width: 960px;
-	margin: auto;
-}
 
 header {
      background-color: #76546C;
      color: #e3e3de;
      width: 100%;
-     padding-left: 12%;
 }
-
-footer {
-
+header h1{
+     padding-top: 20px;
 }
-.rotate {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+/******************************************
+/* TEXT SECTION                   
+/*******************************************/
+#text > * {
+     margin: 2% 0;
 }
 
 #colors div div div{
@@ -198,20 +281,10 @@ footer {
 /******************************************
 /* ADDITIONAL STYLES                   
 /*******************************************/
-#neutral{
-     overflow: hidden;
-}
+
 .color-title-bar{
-     float:left;
-     width: 20px;
-     height: 335px;
-     margin-right:10px;
-     padding-top: 16%;
-}
-.color-title-bar span{
-     display: inline-block;
-     margin-left: -30px;
-     color:#a7a5a0;
+     padding: 5px;
+     background-color: #e3e3de;
 }
 
 
