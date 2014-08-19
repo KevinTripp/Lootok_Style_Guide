@@ -47,32 +47,40 @@ Author: Kevin Tripp
 body {
      color: #000;
      font-size: 18px;
-     line-height: 1.4;
+     line-height: 28px;
      font-family: "helvetica", Arial, sans-serif;
 }
 
   h1
 , h2
-, h3{
-     font-family: "franklin gothic";
-}
+, h3
+,.feature-headline{
+/*     font-family: "franklin gothic";
+*/}
 
 h1{
      font-size: 60px;
+     line-height: 58px;
 }
 
 h2{
      font-size: 42px;
+     line-height: 42px;
 }
 h3{
      font-size: 28px;
+     line-height: 28px;
 }
 h4
 , p {
-     font-family: times;
-}
+/*     font-family: times;
+*/}
 .status-container{
      font-size: 20px;
+}
+.status-container.complete div > span{
+     font-size: 54px;
+          
 }
 .note{
      font-style: italic;  
@@ -90,8 +98,6 @@ a{
      color: black;
      text-decoration: underline;
 }
-
-
 .banner
 , #container {
      width: 80%;
@@ -101,7 +107,17 @@ a{
 section{
      margin:20px auto;
 }
+.secondary-2-border{
+     border-top: 10px solid #cabcc4;
+}
+.light-gray-border{
+     border-top: 10px solid #f5f4f3;
+}
+.med-gray-border{
+     border-top: 10px solid #a7a5a0;
+     border-bottom: 10px solid #a7a5a0;
 
+}
 .box{
      width: 50px;
      height: 50px;
@@ -111,6 +127,11 @@ section{
 .color-title-bar{
      text-transform: uppercase;
 }
+section h3{
+     padding-top: 40px;
+     padding-bottom: 20px;
+}
+
 /******************************************
 /* Header                   
 /*******************************************/
@@ -141,11 +162,43 @@ header h1
 .breadcrumbs{
      padding: 20px 0 0 20px;
 }
+/******************************************
+/* Footer                   
+/*******************************************/
+footer{
+     border-top: 2px solid #e3e3de;
+     color: #e3e3de;
+     font-family: times;
+     padding-top: 10px;
+     font-size: 14px;
+}
+footer span{
+     margin-left: 20px;
+
+}
+footer .branding{
+     font-style:italic; 
+     float:right;
+     width: 30%;
+}
+footer .legal{
+     width: 70%;
+     float: left;
+}
+{
+     color: #e3e3de;
+}
+footer a
+,footer a:visited
+,footer a:hover{
+     text-decoration: none;
+     color: #e3e3de;
+}
 
 /******************************************
 /* Nav                   
 /*******************************************/
-nav{
+nav {
      position: fixed;
      top:0px;
      width: 100%;
@@ -153,8 +206,6 @@ nav{
 }
 nav ul{
      margin: 0px 10%;
-     padding:10px 0: 
-
 }
   nav
 , nav ul li:hover ul{
@@ -165,7 +216,7 @@ nav ul{
 
 nav ul li{
      display: inline-block;
-     margin: 15px 20px 15px 0;
+     margin: 0px 20px 0px 0;
 }
 
 nav ul li ul{
@@ -221,14 +272,14 @@ nav ul li:hover ul li ul li ul li a{
 }
 li .fa-search{
      color: black;
+     height: 27px;
      background: #f2f1ef;
      padding: 3px 3px 6px 3px;
-     margin-top: 1px;
 }
 nav input{
      border: none;
      background: #f2f1ef;
-     width: 80px;
+     width: 50px;
      height:27px;
      outline: none;
 }
@@ -246,6 +297,16 @@ nav .top-nav h3
 /******************************************
 /*  Buttons                
 /*******************************************/
+button{
+     font-weight: bold;
+     background: none;
+     border: none;
+}
+.primary-btn{
+     padding: 10px 10px 11px 10px;
+     color: #dc1944;
+     border: 3px solid #dc1944;
+}
   .hover
 , .primary-btn:hover{
      color: #fff;
@@ -287,9 +348,9 @@ nav .close-btn{
 .close-btn{
      background-color: #dc1944;
      color:#fff;
-     padding: 1px 1px 1px 4px;
+     padding-left: 5px;
      width: 30px; 
-     height: 30px;
+     height: 29px;
 
 }
 .close-btn:hover, .close-btn-hover{
@@ -311,18 +372,6 @@ nav .close-btn{
 , .slideshow-arrow-left.hover-arrow{
      border: 3px solid #dc1944;
 }
-button{
-     font-weight: bold;
-     background: none;
-     border: none;
-}
-.primary-btn{
-     padding: 10px 10px 11px 10px;
-     color: #dc1944;
-     border: 3px solid #dc1944;
-}
-
-
 
 /******************************************
 /* Background Colors                   
@@ -345,32 +394,32 @@ button{
 .black{
      background-color: #000;
 }
-.primary-red
+.primary-color
 , .approved > div
 , .submit-btn{
      background-color: #dc1944;
 }
-.secondary-yellow{
+.secondary-1{
      background-color: #EDB521;
 }
-.secondary-purple
+.secondary-2
 , .chart-label-reversed
 , .status-container{
      background-color: #76546C;
 }
-.tertiary-orange{
+.tertiary-1{
      background-color: #EE9521;
 }
-.tertiary-teal{
+.tertiary-2{
      background-color: #2E9678;
 }
-.tertiary-blue{
+.tertiary-3{
      background-color: #3074A6;
 }
-.tertiary-green{
+.tertiary-4{
      background-color: #A0BB3B;
 }
-.tertiary-magenta{
+.tertiary-5{
      background-color: #B25294;
 }
 .reversed{
@@ -403,32 +452,43 @@ button{
      vertical-align: middle;
      margin:1%;
 }
-
+/******************************************
+/* BANNERS                   
+/*******************************************/
+.feature-headline{
+     background-color: #a7a5a0;
+     padding:20px;
+     display: inline-block;
+     color: #fff;
+     text-align: center;
+}
 /******************************************
 /* FAQ                   
 /*******************************************/
 
-section #faq a{
+section#faq a{
      text-decoration: none;
 }
+
 .faq-holder{
      background-color: #EDB521;
      height: 225px;
      width: 225px;
-     padding-left: 0.75%;
-     padding-top: 5.5%;
+     padding-top: 80px;
        /* Safari 3-4, iOS 1-3.2, Android 1.6- */
      -webkit-border-radius: 50%; 
      /* Firefox 1-3.6 */
      -moz-border-radius: 50%; 
      /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
      border-radius: 50%; 
+     font-size: 72px;
+     line-height: 72px;
+     text-align: center;
 }
 .faq-holder span{
      color: white;
      text-decoration: none;
      font-weight: bold;
-     font-size: 8em;
 }
 /******************************************
 /* WIDGETS                   
@@ -458,6 +518,7 @@ section #faq a{
      padding: 20px;
      width: 200px;
      margin:10px;
+     font-size: 20px;
 }
 
 .approved > div
@@ -476,10 +537,7 @@ section #faq a{
      color: #76546C;
      background-color: rgba(255,255,255, 0.1);
 }
-.status-container p{
-     margin: 20px 0;
-     font-size: 20px;
-}
+
 .submit-btn{
      padding: 20px;
 }
@@ -506,6 +564,58 @@ thead td::after{
      content: " ";
 
 }
+/******************************************
+/* Forms                   
+/*******************************************/
+label{
+     font-weight: bold;
+     display: block;
+}
+input{
+     border: 2px solid #f2f1ef;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     padding: 5px;
+}
+label.error{
+     color: red;
+}
+input.error{
+     border: 2px solid red;
+}
+.submit-confirm{
+     display: none;
+     width: 50%;
+     position: fixed;
+     top: 25%;
+     left: 25%;
+     z-index: 1000;
+     padding: 10px 0;
+}
+.overlay{
+  display: none;
+  content: " ";
+  position: fixed; 
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.2);
+  z-index: 3;
+}
+
+.submit-confirm h3{
+     padding:30px 20px 10px 20px;
+}
+.submit-confirm .close-btn{
+     float: right;
+     margin: 10px;
+}
+.submit-confirm p{
+     width: 100%;
+     padding: 20px;
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES                   
@@ -519,21 +629,30 @@ thead td::after{
      padding: 20px;
 }
 
-
 /******************************************
 /* MOBILE STYLES                   
 /*******************************************/
 
+/* For tablets */
 @media only screen and (max-width : 768px) {
      nav{
-          width: 5%;
+          width: 6%;
           top:0;
+          right: 0;
           position: fixed;
           height: 100%;
           overflow: scroll;
+          border-bottom: none;
+          padding: 0px;
+          /* slides the nav bar in and out*/
+           -moz-transition: all 0.3s;
+         -ms-transition: all 0.3s;
+         -o-transition: all 0.3s;
+         transition: all 0.3s;
      }
+
      nav.open{
-          width: 35%;
+          width: 40%;
      }
      .top-nav{
           display: none;
@@ -543,29 +662,21 @@ thead td::after{
      }
 
      nav ul{
-          width: 100%;
+/*          display: none;
+*/          width: 100%;
+          overflow: hidden;
           padding: 0px;
           margin: 0px;
+          border-bottom: 1px solid black;
      }
      nav ul li{
           display: block;
           margin-right: 0px;
      }
      nav ul li a{
-          display: block;
           padding-left: 20px;
           padding-top: 20px;
-     }
-     nav ul li ul li a
-     , nav ul li ul li ul li{
-          display: block;
-          padding-top: 0px;
-          margin-left: 20px;
-     }
-     nav ul li ul li{
-           padding: 0px;
-           margin-left: 0px;
-     }
+     }    
      nav ul li ul{
           display: none;
           position: static;
@@ -574,6 +685,7 @@ thead td::after{
           background-color: #f5f4f3;
           margin-top: 15px;
      }
+
      nav ul li:hover > ul::before{
           border: 10px solid transparent;
           position: relative;
@@ -584,6 +696,17 @@ thead td::after{
           content: " ";
           top:-20px;
           left: 30px
+     }
+     nav ul li ul li{
+           padding: 0px;
+           margin-left: 0px;
+     }
+
+
+     nav ul li ul li a
+     , nav ul li ul li ul li{
+          padding-top: 0px;
+          margin-left: 20px;
      }
      nav ul li ul li:hover ul::before{
           border: none;
@@ -596,10 +719,14 @@ thead td::after{
      }
 
      nav ul li:hover ul li ul{
+          display: none;
           position: static;
           font-style: italic;
-          padding-top: none;
+          padding-top: 0px;
           width: 100%;
+     }
+     nav ul li:hover ul li:hover ul{
+          display: inline-block;
      }
      nav ul li:hover ul li ul li ul li a{
           color: black;
@@ -610,16 +737,28 @@ thead td::after{
      nav input{
           width: 80%;
      }
-     nav ul li ul li a:hover{
+     nav ul li ul li a:hover
+     , nav ul li ul li ul li ul li a:hover{
           color: red;
      }
      .show,
      nav .close-btn.show{
           display: block;
-          margin-left: 85%;
+          margin-left: 3%;
+          z-index: 1000;
           margin-top: 5%;
      }
+     .hide{
+          /* allows the nav items to be hidden when the nav menu is hidden*/
+          display: none;
+     }
 
+}
+/* For mobile devices */
+@media only screen and (max-width : 460px) {
+     nav.open{
+          width: 60%;
+     }
 }
 
 

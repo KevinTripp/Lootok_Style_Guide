@@ -39,7 +39,7 @@
 				<div class="close-btn">
 					<i class="fa fa-lg fa-times"></i>
 				</div>
-				<ul class="nav-menu">
+				<ul class="nav-menu hide">
 					<li>
 						<a href="#">sites & plans</a>
 						<ul>
@@ -93,16 +93,19 @@
 		</header>
 		<div id="container">
 				<section id="status-containers">
-					<div class="status-container complete">
-						<div>100%</div>
+					<div class="status-container complete secondary-2-border">
+						<div>
+							<span>100%</span>
+							<p>Complete</p>
+						</div>
 						<button class="submit-btn">Submit for approval</button>
 					</div>
-					<div class="status-container submitted">
-						<div><i class="fa fa-check fa-3x"></i> </div>
+					<div class="status-container submitted secondary-2-border">
+						<div><i class="fa fa-check fa-3x"></i></div>
 						<p>Submitted for approval</p>
 					</div>
-					<div class="status-container approved">
-						<div><i class="fa fa-check fa-3x"></i> </div>
+					<div class="status-container approved secondary-2-border">
+						<div><i class="fa fa-check fa-3x"></i></div>
 						<p>Approved!</p>
 					</div>
 				</section>
@@ -161,7 +164,7 @@
 						<div class="color-title-bar">
 							<span class="rotate">Primary</span>
 						</div>
-							<div><div class="box primary-red"></div>
+							<div><div class="box primary-color"></div>
 							<span>HEX: #DC1944</span>
 						</div>
 					</div><!-- End Primary -->
@@ -170,11 +173,11 @@
 							<span class="rotate">Secondary</span>
 						</div>
 						<div>
-							<div class="box secondary-yellow"></div>
+							<div class="box secondary-1"></div>
 							<span>HEX: #EDB521</span>
 						</div>
 						<div>
-							<div class="box secondary-purple"></div>
+							<div class="box secondary-2"></div>
 							<span>HEX: #76546C</span>
 						</div>
 					</div><!-- End Secondary -->
@@ -183,28 +186,36 @@
 							<span class="rotate">Tertiary</span>
 						</div>
 						<div>
-							<div class="box tertiary-orange"></div>
+							<div class="box tertiary-1"></div>
 							<span>HEX: #EE9521</span>
 						</div>
 						<div>
-							<div class="box tertiary-teal"></div>
+							<div class="box tertiary-2"></div>
 							<span>HEX: #2E9678</span>
 						</div>
 						<div>
-							<div class="box tertiary-blue"></div>
+							<div class="box tertiary-3"></div>
 							<span>HEX: #3074A6</span>
 						</div>
 						<div>
-							<div class="box tertiary-green"></div>
+							<div class="box tertiary-4"></div>
 							<span>HEX: #A0BB3B</span>
 						</div>
 						<div>
-							<div class="box tertiary-magenta"></div>
+							<div class="box tertiary-5"></div>
 							<span>HEX: #B25294</span>
 						</div>
 					</div><!-- End Tertiary -->
 				</section><!-- End Colors -->
+				<section id="feature-headline-holder">
+					<h3>Feature Headline</h3>
+					<div class="feature-headline">
+						<h2>Lementum in, vestibulum </h2>
+						<p>Lementum in, vestibulumLementum in, vestibulum</p>
+					</div>
+				</section>
 				<section id="faq">
+					<h3>FAQ</h3>
 					<a href="#">
 						<div class="faq-holder">
 							<span>FAQs</span>
@@ -212,6 +223,7 @@
 					</a>
 				</section><!-- End FAQ -->
 				<section id="widgets">
+					<h3>Widgets</h3>
 					<div class="chart-label">engaged</div>
 					<p>Chart Label - Franklin Gothic Compressed 14px black.
 					<div class="chart-label-reversed">88</div>
@@ -227,7 +239,7 @@
 					    </div>
 					</div> <!-- End style arrows -->
 					<div class="service-label-holder">
-						<div class="service-label">n feugiat donec nibh mauris, elementum in, vestibulum 
+						<div class="service-label">feugiat donec nibh mauris, elementum in, vestibulum 
 						</div>
 						<p>Service Label - Franklin Gothic Compressed Demi 22/24; Black center aligned</p>
 					</div> <!-- End service label holder -->
@@ -251,8 +263,8 @@
 						</div>
 					</div> <!-- End Style Close Button -->
 				</section><!-- End Widgets -->
-
 				<section id="header-reversed-holder" class="reversed">
+					<h3>Reversed</h3>
 					<div class="header-reversed">
 						<h1 class="reversed">Header 1 - Franklin Gothic Compressed Demi 60/58 black - Lorem ipsu dolor amet</h1>
 						<h2 class="reversed">Header 2 - Franklin Gothic Compressed Demi 42/42 black - Lorem ipsu dolor amet</h2>
@@ -264,6 +276,7 @@
 					</div>
 				</section><!-- End Header Reversed -->
 				<section id="table-holder">
+					<h3>Table</h3>
 					<table>
 						<thead>
 							<tr>
@@ -292,7 +305,68 @@
 						</tbody>
 					</table>
 				</section>
+				<section id="forms-holder">
+					<form>
+					<h3>Forms</h3>
+					<div class="textfield">
+						 <label for="email">Email:</label>
+						 <input type="text" name="email">
+						<label for="password">Password:</label>
+						<input type="text" name="password">
+					</div>
+					<div class="textfield">
+						<div class="error-msg">feugiat donec nibh mauris, elementum in, vestibulum 
+						</div>
+						 <label class="error" for="email">First Name</label>
+						 <input class="error" type="text" name="email">
+					</div>
+					<div class="radio">
+						<label for="radio">Select a thing:</label>
+						<div>
+							<input type="radio" name="radio" value="thing1">thing1
+							<input type="radio" name="radio" value="thing2">thing2
+						</div>
+					<div class="check">
+						<label for="check">Select a thing:</label>
+						<div>
+							<input type="checkbox" name="check" value="thing1">thing1
+							<input type="checkbox" name="check" value="thing2">thing2
+						</div>
+					<div class="select">
+						<label for="car">Select a car!</label>	
+						<select name-"car">
+						  <option value="volvo">Volvo</option>
+						  <option value="saab">Saab</option>
+						  <option value="mercedes">Mercedes</option>
+						  <option value="audi">Audi</option>
+						</select>
+					</div>
+					<div class="textarea">
+						<label for="textarea">Tell me something!</label>
+						<textarea name="textarea" rows="6" cols="60">To be or not to be, that is the question.  Whether tis nobler to suffer the slings of outrageous fortune or to sleep. and to sleep, end them.
+						</textarea>
+					</div>
+					<button class="secondary-btn">Cancel</button>
+					<button class="primary-btn"> Submit</button>
+					</form>
+				</section><!-- forms -->
+				<section id="submit-confirm-holder">
+					<div class="overlay"></div>
+					<div class="submit-confirm med-gray clearfix">
+						<div class="close-btn">
+							<i class="fa fa-lg fa-times"></i>
+						</div>
+						<h3 class="light-gray">Form Completed</h3>
+						<p class="white">
+							To be or not to be, that is the question.  Whether tis nobler to suffer the slings of outrageous fortune or to sleep. and to sleep, end them.
+						</p>
+					</div>
+				</section>
 		</div><!-- #container -->
+		<footer class="clearfix">
+			<div class="legal"><span>&copy; 2014 Lootok</span><span></span><a href="#"> Terms and conditions</a></span><span><a href="#">Privacy Policy</a></span></div>
+			<div class="branding">Powered by <a href="#">lootok <i class="fa fa-circle-o"></i>  <i class="fa fa-circle-o"></i>&nbsp;&nbsp;&nbsp; <i class="fa fa-circle-o"></i></a></div>
+		</footer>
 		<script src="//code.jquery.com/jquery-latest.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script type="text/javascript" src="js/main.js"></script>
