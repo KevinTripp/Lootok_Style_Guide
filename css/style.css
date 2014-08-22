@@ -208,11 +208,12 @@ nav ul{
      -mox-background-clip: padding-box;
      -webkit-background-clip: padding-box;
      background-clip: padding-box;
+     behavior: url(../../vendor/PIE-1.0.0/PIE.htc); 
 }
 
 nav ul li{
      display: inline-block;
-     margin: 0px 20px 0px 0;
+     margin: 0px 20px 0px 0px;
 }
 
 nav ul li ul{
@@ -220,13 +221,13 @@ nav ul li ul{
      position: absolute;
      width: 25%;
      margin-left: 0px;
-     border: 10px solid rgba(245,244,243,.25);
-     border-top: 27px solid transparent;
-     border-radius-top: 10px;
+     margin-bottom: 10px;
+/*     border: 10px solid rgba(245,244,243,.25);
+*/     border-top: 27px solid transparent;
 }
 nav ul li ul li{
      padding-left: 20px;
-     margin: 0;
+     margin: 10px 0px 0px 0px;
      width: 100%;
 }
 
@@ -242,7 +243,7 @@ nav ul li:hover > ul::before{
      width: 0px;
      content: " ";
      top:-19px;
-     left:30px;
+     left:20px;
 }
 
 nav ul li:hover a{
@@ -274,6 +275,7 @@ nav input{
      width: 50px;
      height:30px;
      outline: none;
+     font-size: 12px;
 }
 nav .top-nav{
      width: 100%;
@@ -303,8 +305,6 @@ button{
 }
 
 .hamburger{
-     height:30px;
-     width:30px;
      padding:5px;
      display: none;
 
@@ -314,31 +314,36 @@ nav .close-btn{
 }
 
 .hamburger div{
-     border:1px solid #fff;
-     height:1px;
-     width:80%;
-     margin-top:4px;
-     margin-left:1px;
+     border: 1.5px solid #fff;
+     height: 1px;
+     width: 20px;
+     margin: 4px 0px;
+     margin-top: 4px;
+     margin-left: 1px;
 }
 
 .close-btn{
-     padding-left: 5px;
-     width: 30px; 
-     height: 29px;
-
+     padding: 5px;
+     padding: 4px;
+     display: inline-block;
+     font-size: 12px;
+     border: 3px solid #dc1944;
+}
+.close-btn:hover{
+     border: 3px solid #dc1944;
 }
   .slideshow-arrow-left
 , .slideshow-arrow-right{
-     height: 50px;
-     width: 50px;
-     padding: 5px 14px;
+     font-size: 15px;
+     display: inline-block;
+     padding: 3px 10px 1px 11px;
      border: 3px solid transparent;
 }
   .slideshow-arrow-left:hover
 , .slideshow-arrow-right:hover
 , .slideshow-arrow-right.hover-arrow
 , .slideshow-arrow-left.hover-arrow{
-     border: 3px solid #dc1944;
+     border: 3px solid rgba(220,25,68,.6);
 }
 
 /******************************************
@@ -346,8 +351,8 @@ nav .close-btn{
 /*******************************************/
 
 .white
-, .close-btn:hover
 , .close-btn-hover
+, .close-btn:hover
 , .hamburger div
 , nav .top-nav
 , .loginBox
@@ -512,7 +517,8 @@ section#faq a{
      /* Firefox 1-3.6 */
      -moz-border-radius: 50%; 
      /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-     border-radius: 50%; 
+     border-radius: 50%;
+     behavior: url(../../vendor/PIE-1.0.0/PIE.htc); 
      font-size: 72px;
      line-height: 72px;
      text-align: center;
@@ -552,7 +558,12 @@ section#faq a{
 
 .approved > div
 , .submitted > div{
+     -webkit-border-radius: 50%; 
+     /* Firefox 1-3.6 */
+     -moz-border-radius: 50%; 
+     /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
      border-radius: 50%;
+     behavior: url(../../vendor/PIE-1.0.0/PIE.htc); 
      height: 75px;
      width: 75px;
      padding: 7%;
@@ -644,7 +655,7 @@ input.error{
      position: fixed;
      top: 25%;
      left: 25%;
-     z-index: 1000;
+     z-index: 4;
      padding: 10px 0;
 }
 .overlay{
@@ -712,65 +723,59 @@ input.error{
      nav ul{
           width: 100%;
           overflow: hidden;
-          padding: 0px;
           margin: 0px;
           border-bottom: 1px solid black;
      }
      nav ul li{
           display: block;
-          margin-right: 0px;
+          margin: 20px 0px 30px 0px;
      }
      nav ul li a{
-          padding-left: 20px;
-          padding-top: 20px;
+          margin-left: 20px;
+          margin-bottom: 20px;
+          display:block;
+
      }    
      nav ul li ul{
           display: none;
-          position: static;
+          position: relative;
           border: none;
           width: 100%;
-          background-color: #f5f4f3;
-          margin-top: 15px;
+          background-color: #f5f4f3; 
+          overflow: visible;
      }
      nav ul li:hover > ul::before{
           border: 10px solid transparent;
-          position: relative;
-          border-bottom-color:#f5f4f3; 
+          position: absolute;
           display: block;
+          border-bottom-color:#f5f4f3; 
           height: 0px;
           width: 0px;
           content: " ";
           top:-20px;
-          left: 30px
+          left: 20px;
      }
      nav ul li ul li{
-           padding: 0px;
-           margin-left: 0px;
+          padding-left: 10px;
+          padding-top: 30px;
+          margin: 0px
      }
-     nav ul li ul li a
-     , nav ul li ul li ul li{
-          padding-top: 0px;
-          margin-left: 20px;
+     nav ul li ul li:first-child{
+          padding-top: 20px;
      }
-     nav ul li ul li:hover ul::before{
-          border: none;
-          position: relative;
-          height: 0px;
-          width: 0px;
-          content: "";
-          top:-20px;
-          left: 30px
+
+     nav ul li ul li ul li{
+          padding-left: 20px;
+          padding-top: 30px
      }
+
      nav ul li:hover ul li ul{
-          display: none;
+          display: block;
           position: static;
           font-style: italic;
-          padding-top: 0px;
           width: 100%;
      }
-     nav ul li:hover ul li:hover ul{
-          display: inline-block;
-     }
+
      nav ul li:hover ul li ul li ul li a{
           color: #000;
      }
@@ -786,9 +791,8 @@ input.error{
      }
      .show,
      nav .close-btn.show{
-          display: block;
+          display: inline-block;
           margin-left: 3%;
-          z-index: 1000;
           margin-top: 5%;
      }
      .hide{
