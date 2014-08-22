@@ -14,8 +14,9 @@
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/reset.css">
-		<script type="text/javascript" src="https://use.typekit.net/eis4mqp.js"></script>
+		<script type="text/javascript" src="//use.typekit.net/fcd4zdj.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<link href="vendor/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=none">
 
@@ -23,22 +24,109 @@
 
 	<body>
 		<header>
-			<h1>Lootok</h1>
-			<h2>Style Guide</h2>
+			<nav>
+				<div class="top-nav clearfix">
+					<h3>lootok</h3>
+					<div class="user-info">
+						Sally McPearson
+					</div>
+				</div>
+				<div class="hamburger show">
+				  <div></div>
+				  <div></div>
+				  <div></div>
+				</div>
+				<div class="close-btn">
+					<i class="fa fa-lg fa-times"></i>
+				</div>
+				<ul class="nav-menu hide">
+					<li>
+						<a href="#">sites & plans</a>
+						<ul>
+							<li>
+								<a href="#">online learning</a>
+								<ul>
+									<li><a href="#">1sub-item one</a></li>
+									<li><a href="#">1sub-item two</a></li>
+									<li><a href="#">1sub-item three</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Document library</a></li>
+							<li>
+								<a href="#">Glossary</a>
+								<ul>
+									<li><a href="#">sub-item one</a></li>
+									<li><a href="#">sub-item two</a></li>
+									<li>
+										<a href="#">sub-item there</a>
+										<ul>
+											<li><a href="#">sub-sub-item one</a></li>
+											<li><a href="#">sub-sub-item two</a></li>
+											<li><a href="#">sub-sub-item three</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">resources</a>
+						<ul>
+							<li><a href="#">sub-item one</a></li>
+							<li><a href="#">sub-item two</a></li>
+							<li>
+								<a href="#">sub-item three</a>
+								<ul>
+									<li><a href="#">sub-sub-item one</a></li>
+									<li><a href="#">sub-sub-item two</a></li>
+									<li><a href="#">sub-sub-item three</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">news & events</a></li>
+					<li><a href="#">help</a></li>
+					<li><i class="fa fa-search"></i><input type="text"></li>
+				</ul>
+			</nav>
+
+			<div class="banner">
+				<div class="breadcrumbs">
+							<a href="#">Home</a> > <a href="#">Site</a> > <a href="#">Munich</a>
+							<p>
+				</div>
+				<h2>Lootok Style Guide</h2>
+			</div><!-- End Banner -->
 		</header>
 		<div id="container">
-			<section id="content">
+				<section id="status-containers">
+					<div class="status-container complete secondary-2-border">
+						<div>
+							<span>100%</span>
+							<p>Complete</p>
+						</div>
+						<button class="submit-btn">Submit for approval</button>
+					</div>
+					<div class="status-container submitted secondary-2-border">
+						<div><i class="fa fa-check fa-3x"></i></div>
+						<p>Submitted for approval</p>
+					</div>
+					<div class="status-container approved secondary-2-border">
+						<div><i class="fa fa-check fa-3x"></i></div>
+						<p>Approved!</p>
+					</div>
+				</section>
 				<section id="buttons">
 					<div id="primary-buttons">
-						<h4>Primary Button<h4>
+						<h4>Primary Button</h4>
 						<button class="primary-btn">Primary Button</button>
 						<button class="primary-btn hover">Primary Button</button>
-					</div><!-- primary buttons -->
+					</div><!-- Primary Buttons -->
 					<div id="secondary-buttons">
-						<h4>Secondary Button<h4>
+						<h4>Secondary Button</h4>
 						<button class="secondary-btn">Secondary Button</button>
 						<button class="secondary-btn secondary-hover">Secondary Button</button>
-					</div><!-- primary buttons -->
+					</div><!-- Secondary Buttons -->
 				</section><!-- End buttons -->
 				<section id="text">
 					<h1>Header 1 - Franklin Gothic Compressed Demi 60/58 black - Lorem ipsu dolor amet</h1>
@@ -48,48 +136,68 @@
 					<p>Body - Times New Roman 18/28 black - Lorem ipsum dolor sit amet, in feugiat donec nibh mauris, elementum in, vestibulum in vestibulum inceptos odio vestibulum. Euismod mollis nec aliquam lectus, quam in dolor malesuada enim, erat ante ut venenatis aliquam hac mauris. Enim suspendisse, sed maecenas laoreet, duis molestie, nam ligula at at integer dolor lorem, dui nullam pellentesque justo arcu morbi.</p>
 					<p class="note">Note Text - Times 18/28 pt italix black - 
 					Lorem ipsum dolor sit amet, in feugiat donec nibh mauris, elementum in, vestibulum in vestibulum inceptos odio vestibulum. Euismod mollis nec aliquam lectus, quam in dolor malesuada enim, erat ante ut venenatis aliquam hac mauris. Enim suspendisse, sed maecenas laoreet, duis molestie, nam ligula at at integer dolor lorem, dui nullam pellentesque justo arcu morbi.</p>
-					<a href="#">link off state</a>
-					<a href="#" class="link-hover">link hover state</a>
-					<a href="#" class="link-visited">link visited state</a>
+					<a href="#text">link off state</a>
+					<a href="#colors" class="link-hover">link hover state</a>
+					<a href="#neutral" class="link-visited">link visited state</a>
 				</section> <!-- End Text -->
+				<section id="header-reversed-holder" class="reversed">
+					<h3>Reversed</h3>
+					<div class="header-reversed">
+						<h1 class="reversed">Header 1 - Franklin Gothic Compressed Demi 60/58 black - Lorem ipsu dolor amet</h1>
+						<h2 class="reversed">Header 2 - Franklin Gothic Compressed Demi 42/42 black - Lorem ipsu dolor amet</h2>
+						<h3 class="reversed">Header 3 - Franklin Gothic Compressed Demi 28/28 black - Lorem ipsu dolor amet</h3>
+						<div class="breadcrumbs reversed">
+							<a href="#">Home</a> > <a href="#">Site</a> > <a href="#">Munich</a>
+							<p>Franklin Gothic Compressed Demo 20/20px white - Lorem ipsu dolor amet
+						</div>
+					</div>
+				</section><!-- End Header Reversed -->
 				<section id="colors">
 					<h1>Colors</h1>
 					<div id="neutral">
-						<div class="color-title-bar light-gray">
-							<span class="rotate">neutral</span>
+						<div class="color-title-bar">
+							<span class="">neutral</span>
 						</div>
 						<div>
-							<div class="box white"></div><span>White HEX: #fff</span>
+							<div class="box white"></div>
+							<span>White HEX: #fff</span>
 						</div>
 						<div>
-							<div class="box light-gray"></div><span>Light Gray HEX: #e3e3d3</span>
+							<div class="box light-gray"></div>
+							<span>Light Gray HEX: #e3e3d3</span>
 						</div>
 						<div>
-							<div class="box med-gray"></div><span>Medium Gray HEX: #a7a5a0</span>
+							<div class="box med-gray"></div>
+							<span>Medium Gray HEX: #a7a5a0</span>
 						</div>
 						<div>
-							<div class="box dark-gray"></div><span>Dark Gray HEX: #535449</span>
+							<div class="box dark-gray"></div>
+							<span>Dark Gray HEX: #535449</span>
 						</div>
 						<div>
-							<div class="box black"></div><span>Black HEX: #000</span>
+							<div class="box black"></div>
+							<span>Black HEX: #000</span>
 						</div>
 					</div><!-- End Neutral -->
 					<div id="primary">
-						<div class="color-title-bar light-gray">
+						<div class="color-title-bar">
 							<span class="rotate">Primary</span>
 						</div>
-							<div><div class="box primary-red"></div><span>HEX: #DC1944</span>
+							<div><div class="box primary-color"></div>
+							<span>HEX: #DC1944</span>
 						</div>
 					</div><!-- End Primary -->
 					<div id="secondary">
-						<div class="color-title-bar light-gray">
+						<div class="color-title-bar">
 							<span class="rotate">Secondary</span>
 						</div>
 						<div>
-							<div class="box secondary-yellow"></div><span>HEX: #EDB521</span>
+							<div class="box secondary-1"></div>
+							<span>HEX: #EDB521</span>
 						</div>
 						<div>
-							<div class="box secondary-purple"></div><span>HEX: #76546C</span>
+							<div class="box secondary-2"></div>
+							<span>HEX: #76546C</span>
 						</div>
 					</div><!-- End Secondary -->
 					<div id="tertiary">
@@ -97,31 +205,191 @@
 							<span class="rotate">Tertiary</span>
 						</div>
 						<div>
-							<div class="box tertiary-orange"></div><span>HEX: #EE9521</span>
+							<div class="box tertiary-1"></div>
+							<span>HEX: #EE9521</span>
 						</div>
 						<div>
-							<div class="box tertiary-teal"></div><span>HEX: #2E9678</span>
+							<div class="box tertiary-2"></div>
+							<span>HEX: #2E9678</span>
 						</div>
 						<div>
-							<div class="box tertiary-blue"></div><span>HEX: #3074A6</span>
+							<div class="box tertiary-3"></div>
+							<span>HEX: #3074A6</span>
 						</div>
 						<div>
-							<div class="box tertiary-green"></div><span>HEX: #A0BB3B</span>
+							<div class="box tertiary-4"></div>
+							<span>HEX: #A0BB3B</span>
 						</div>
 						<div>
-							<div class="box tertiary-magenta"></div><span>HEX: #B25294</span>
+							<div class="box tertiary-5"></div>
+							<span>HEX: #B25294</span>
 						</div>
 					</div><!-- End Tertiary -->
+				</section><!-- End Colors -->
+				<section id="feature-headline-holder">
+					<h3>Feature Headline</h3>
+					<div class="feature-headline">
+						<h2>Lementum in, vestibulum </h2>
+						<p>Lementum in, vestibulumLementum in, vestibulum</p>
+					</div>
 				</section>
-			</section><!-- End Content -->
-			<footer>
-				
-			</footer>
+				<section id="faq">
+					<h3>FAQ</h3>
+					<a href="#">
+						<div class="faq-holder">
+							<span>FAQs</span>
+						</div>
+					</a>
+				</section><!-- End FAQ -->
+				<section id="widgets">
+					<h3>Widgets</h3>
+					<div class="chart-label">engaged</div>
+					<p>Chart Label - Franklin Gothic Compressed 14px black.
+					<div class="chart-label-reversed">88</div>
+					<p>Chart Label Reversed - Franklin Gothic Compressed 14px black.</p>
+					<div class="style-arrows">
+						<div class="slideshow-arrow-left"><i class="fa fa-2x fa-caret-left"></i></div>
+						<div class="slideshow-arrow-right"><i class="fa fa-2x fa-caret-right"></i></div>
+						<div><p>Slide Show Arrows Off - 60% primary color</p></div>
+						<div class="slideshow-arrow-left hover-arrow"><i class="fa fa-2x fa-caret-left"></i></div>
+					    <div class="slideshow-arrow-right hover-arrow"><i class="fa fa-2x fa-caret-right"></i></div>
+					    <div>
+					    	<p>Slide Show Arrows Hover - 3px stroke 60% primary color</p>
+					    </div>
+					</div> <!-- End style arrows -->
+					<div class="service-label-holder">
+						<div class="service-label">feugiat donec nibh mauris, elementum in, vestibulum 
+						</div>
+						<p>Service Label - Franklin Gothic Compressed Demi 22/24; Black center aligned</p>
+					</div> <!-- End service label holder -->
+					<div class="error-label-holder">
+						<div class="error-msg">feugiat donec nibh mauris, elementum in, vestibulum 
+						</div>
+						<p>Error Message - Times New Roman 18/24; Primary Color Background 10% of primary color</p>
+					</div> <!-- End error label holder -->
+					<div class="style-close-button">
+						<div class="close-btn">
+							<i class="fa fa-lg fa-times"></i>
+						</div>
+						<div>
+							<p>Close Button Off - Background primary color color white</p>
+						</div>
+						<div class="close-btn close-btn-hover">
+							<i class="fa fa-lg fa-times"></i>
+						</div>
+						<div>
+							<p>Close Button Hover - Background white color primary</p>
+						</div>
+					</div> <!-- End Style Close Button -->
+				</section><!-- End Widgets -->
+				<section id="table-holder">
+					<h3>Table</h3>
+					<table>
+						<thead>
+							<tr>
+								<td>title</td>
+								<td>file type</td>
+								<td>creator</td>
+								<td>date created</td>
+								<td>date modified</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Data1</td>
+								<td>Data1</td>
+								<td>Data1</td>
+								<td>Data1</td>
+								<td>Data1</td>
+							</tr>
+							<tr>
+								<td>Data2</td>
+								<td>Data2</td>
+								<td>Data2</td>
+								<td>Data2</td>
+								<td>Data2</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section id="forms-holder">
+					<form>
+					<h3>Forms</h3>
+					<div class="textfield">
+						 <label for="email">Email:</label>
+						 <input type="text" name="email">
+						<label for="password">Password:</label>
+						<input type="text" name="password">
+					</div>
+					<div class="textfield">
+						<div class="error-msg">feugiat donec nibh mauris, elementum in, vestibulum 
+						</div>
+						 <label class="error" for="email">First Name</label>
+						 <input class="error" type="text" name="email">
+					</div>
+					<div class="radio">
+						<label for="radio">Select a thing:</label>
+						<div>
+							<input type="radio" name="radio" value="thing1">thing1
+							<input type="radio" name="radio" value="thing2">thing2
+						</div>
+					<div class="check">
+						<label for="check">Select a thing:</label>
+						<div>
+							<input type="checkbox" name="check" value="thing1">thing1
+							<input type="checkbox" name="check" value="thing2">thing2
+						</div>
+					<div class="select">
+						<label for="car">Select a car!</label>	
+						<select name-"car">
+						  <option value="volvo">Volvo</option>
+						  <option value="saab">Saab</option>
+						  <option value="mercedes">Mercedes</option>
+						  <option value="audi">Audi</option>
+						</select>
+					</div>
+					<div class="textarea">
+						<label for="textarea">Tell me something!</label>
+						<textarea name="textarea" rows="6" cols="60">To be or not to be, that is the question.  Whether tis nobler to suffer the slings of outrageous fortune or to sleep. and to sleep, end them.
+						</textarea>
+					</div>
+					<button class="secondary-btn">Cancel</button>
+					<button class="primary-btn"> Submit</button>
+					</form>
+				</section><!-- forms -->
+				<section id="submit-confirm-holder">
+					<div class="overlay"></div>
+					<div class="submit-confirm med-gray clearfix">
+						<div class="close-btn">
+							<i class="fa fa-lg fa-times"></i>
+						</div>
+						<h3 class="light-gray">Form Completed</h3>
+						<p class="white">
+							To be or not to be, that is the question.  Whether tis nobler to suffer the slings of outrageous fortune or to sleep. and to sleep, end them.
+						</p>
+					</div>
+				</section>
+				<section id="login-holder">
+					<div id="login">
+						<h1>lootok</h1>
+						<div class="loginBox">
+							<h2>Welcome to the Lootok Business Continuity Portal</h2>
+							<input class ="username" placeholder="Username">
+							<input class="password" placeholder="Password">
+							<button class="login">Log in</button>
+							<span>
+								<a href="#">Register</a> | <a href="#">Forgot your password?</a>
+							</span>
+						</div>
+					</div>
+				</section><!-- Login -->
 		</div><!-- #container -->
-
-
+		<footer class="clearfix">
+			<div class="legal"><span>&copy; 2014 Lootok</span><span></span><a href="#"> Terms and conditions</a></span><span><a href="#">Privacy Policy</a></span></div>
+			<div class="branding">Powered by <a href="#">lootok <i class="fa fa-circle-o"></i>  <i class="fa fa-circle-o"></i>&nbsp;&nbsp;&nbsp; <i class="fa fa-circle-o"></i></a></div>
+		</footer>
 		<script src="//code.jquery.com/jquery-latest.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
