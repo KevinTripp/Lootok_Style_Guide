@@ -48,21 +48,29 @@ body {
      color: #000;
      font-size: 18px;
      line-height: 28px;
-     font-family: "helvetica", Arial, sans-serif;
+     font-family: times, Arial, sans-serif;
 }
-
   h1
 , h2
 , h3
-,.feature-headline{
-/*     font-family: "franklin gothic";
-*/}
+,.feature-headline
+, nav
+, .faq-holder
+, .chart-label
+, .service-label{
+     font-family: "franklin gothic";
+}
+nav ul{
+     font-family: times, arial, sans-serif;
+}
 
 h1{
      font-size: 60px;
      line-height: 58px;
 }
-
+.status-container.complete div > span{
+     font-size: 54px;         
+}
 h2{
      font-size: 42px;
      line-height: 42px;
@@ -71,23 +79,27 @@ h3{
      font-size: 28px;
      line-height: 28px;
 }
-h4
-, p {
-/*     font-family: times;
-*/}
+nav{
+     font-size: 16px;
+     line-height: 18px;
+}
+footer{
+     line-height: 20px;
+}
+.service-label{
+     font-size: 22px;
+     line-height: 24px;
+}
 .status-container{
      font-size: 20px;
 }
-.status-container.complete div > span{
-     font-size: 54px;
-          
-}
-.note{
-     font-style: italic;  
+.chart-label
+, .chart-label-reversed{
+     font-size: 14px;
 }
 
-a{
-     color:#dc1944;
+.note{
+     font-style: italic;  
 }
   a:hover
 , .link-hover{
@@ -116,13 +128,12 @@ section{
 .med-gray-border{
      border-top: 10px solid #a7a5a0;
      border-bottom: 10px solid #a7a5a0;
-
 }
 .box{
+     margin: 10px;
      width: 50px;
      height: 50px;
      border: 1px solid black;
-     display: inline-block;
 }
 .color-title-bar{
      text-transform: uppercase;
@@ -137,15 +148,9 @@ section h3{
 /*******************************************/
 
 header{
-     background-color: #76546C;
-     color: #fff;
      width: 100%;
      padding:20px 0px;
 }
-.banner a{
-     color: #fff;
-}
-
 .banner{
      margin: 11% auto 0px auto;
      border-left: 3px solid #cabcc4;
@@ -167,10 +172,7 @@ header h1
 /*******************************************/
 footer{
      border-top: 2px solid #e3e3de;
-     color: #e3e3de;
-     font-family: times;
      padding-top: 10px;
-     font-size: 14px;
 }
 footer span{
      margin-left: 20px;
@@ -185,14 +187,11 @@ footer .legal{
      width: 70%;
      float: left;
 }
-{
-     color: #e3e3de;
-}
+
 footer a
 ,footer a:visited
 ,footer a:hover{
      text-decoration: none;
-     color: #e3e3de;
 }
 
 /******************************************
@@ -224,7 +223,6 @@ nav ul li ul{
      position: absolute;
      width: 25%;
      margin-left: 0px;
-     background-color: #e3e3de;
      border: 10px solid rgba(245,244,243,.25);
      border-top: 27px solid transparent;
 }
@@ -240,7 +238,7 @@ nav ul li:hover ul{
 nav ul li:hover > ul::before{
      border: 10px solid transparent;
      position: absolute;
-     border-bottom-color:#e3e3de;; 
+     border-bottom-color:#e3e3de;
      height: 0px;
      width: 0px;
      content: " ";
@@ -267,26 +265,19 @@ nav ul li:hover ul li ul{
      padding-top: 5px;
      width: 100%;
 }
-nav ul li:hover ul li ul li ul li a{
-     color: red;
-}
+
 li .fa-search{
-     color: black;
      height: 27px;
-     background: #f2f1ef;
      padding: 3px 3px 6px 3px;
 }
 nav input{
      border: none;
-     background: #f2f1ef;
      width: 50px;
      height:27px;
      outline: none;
 }
 nav .top-nav{
      width: 100%;
-     background:#fff;
-     color: grey;
 }
 nav .top-nav h3
 ,nav .top-nav div{
@@ -304,28 +295,16 @@ button{
 }
 .primary-btn{
      padding: 10px 10px 11px 10px;
-     color: #dc1944;
      border: 3px solid #dc1944;
 }
-  .hover
-, .primary-btn:hover{
-     color: #fff;
-     background-color: #dc1944;
-}
+
 .secondary-btn{
      padding: 13px 13px 14px 13px;
      color: black;
      border: 3px solid grey;
 }
 
-  .secondary-hover
-, .secondary-btn:hover{
-     color: #fff;
-     background-color: grey;
-}
-
 .hamburger{
-     background:#dc1944;
      height:30px;
      width:30px;
      padding:5px;
@@ -342,27 +321,18 @@ nav .close-btn{
      width:80%;
      margin-top:4px;
      margin-left:1px;
-     background:#fff;
 }
 
 .close-btn{
-     background-color: #dc1944;
-     color:#fff;
      padding-left: 5px;
      width: 30px; 
      height: 29px;
 
 }
-.close-btn:hover, .close-btn-hover{
-     background-color: #fff;
-     color:#dc1944;
-}
-
   .slideshow-arrow-left
 , .slideshow-arrow-right{
      height: 50px;
      width: 50px;
-     color: #dc1944;
      padding: 5px 14px;
      border: 3px solid transparent;
 }
@@ -374,18 +344,35 @@ nav .close-btn{
 }
 
 /******************************************
-/* Background Colors                   
+/* Background Colors - Add the element that you want to recive the color to the list of elements for that background color               
 /*******************************************/
 
-.white{
+.white
+, .close-btn:hover
+, .close-btn-hover
+, .hamburger div
+, nav .top-nav
+, .loginBox
+, .login:hover{
      background-color: #fff;
+}
+.pale-gray
+,nav input
+,li .fa-search{
+     background: #f2f1ef;
 }
 .light-gray
 , nav
-, table{
+, table
+, nav ul li ul
+, .color-title-bar
+, #login{
      background-color: #e3e3de;
 }
-.med-gray{
+.med-gray
+, .secondary-hover
+, .secondary-btn:hover
+, .feature-headline{
      background-color: #a7a5a0;
 }
 .dark-gray{
@@ -394,9 +381,14 @@ nav .close-btn{
 .black{
      background-color: #000;
 }
+
 .primary-color
 , .approved > div
-, .submit-btn{
+, .submit-btn
+, .close-btn
+, .hamburger
+, .hover
+, .primary-btn:hover{
      background-color: #dc1944;
 }
 .secondary-1{
@@ -404,7 +396,10 @@ nav .close-btn{
 }
 .secondary-2
 , .chart-label-reversed
-, .status-container{
+, .status-container
+, .reversed
+, header
+, .login{
      background-color: #76546C;
 }
 .tertiary-1{
@@ -422,24 +417,63 @@ nav .close-btn{
 .tertiary-5{
      background-color: #B25294;
 }
-.reversed{
-     background-color: #76546C;
-     color: #fff;
-}
-.reversed a{
-     color: #fff;
+.faq-holder{
+     background-color: #EDB521;
 }
 
 /******************************************
 /* Font Colors                   
 /*******************************************/
 .f-white
-, .submit-btn{
+, .submit-btn
+, .reversed a
+, .reversed
+, .close-btn
+, .secondary-hover
+, .secondary-btn:hover
+, .hover
+, .primary-btn:hover
+, .banner a
+, header
+, .status-container
+, .approved > div
+, .chart-label-reversed
+, .faq-holder span
+, .feature-headline
+, .login{
      color: #fff;
 }
-/******************************************
-/* LAYOUT                   
-/*******************************************/
+footer a
+,footer a:visited
+,footer{
+     color: #535449;
+}
+.login:hover{
+     color: #76546C;
+}
+
+  .slideshow-arrow-left
+, .slideshow-arrow-right
+, .close-btn:hover
+, .close-btn-hover
+, .primary-btn
+, nav ul li:hover ul li ul li ul li a
+, a
+, label.error
+, .error-msg
+, footer a:hover{
+     color: #dc1944;
+}
+nav .top-nav{
+     color:#a7a5a0;
+}
+li .fa-search{
+     color: #000;
+}
+.submitted > div{
+     color: #76546C;
+}
+
 
 /******************************************
 /* TEXT SECTION                   
@@ -448,18 +482,12 @@ nav .close-btn{
      margin: 2% 0;
 }
 
-#colors div div div{
-     vertical-align: middle;
-     margin:1%;
-}
 /******************************************
 /* BANNERS                   
 /*******************************************/
 .feature-headline{
-     background-color: #a7a5a0;
      padding:20px;
      display: inline-block;
-     color: #fff;
      text-align: center;
 }
 /******************************************
@@ -471,7 +499,6 @@ section#faq a{
 }
 
 .faq-holder{
-     background-color: #EDB521;
      height: 225px;
      width: 225px;
      padding-top: 80px;
@@ -486,7 +513,6 @@ section#faq a{
      text-align: center;
 }
 .faq-holder span{
-     color: white;
      text-decoration: none;
      font-weight: bold;
 }
@@ -497,7 +523,6 @@ section#faq a{
      font-size:14px;
 }
 .chart-label-reversed{
-     color: white;
      padding: 9px 12px;
      width: 45px;
 }
@@ -507,7 +532,6 @@ section#faq a{
      font-size: 22px;
 }
 .error-msg{
-     color: #dc1944;
      background-color: rgba( 220, 25, 68, .1);
      padding: 10px;
 }
@@ -522,19 +546,14 @@ section#faq a{
 }
 
 .approved > div
-, .submitted > div
-{
+, .submitted > div{
      border-radius: 50%;
      height: 75px;
      width: 75px;
      padding: 7%;
 }
-.status-container
-, .approved > div{
-     color:#fff;
-}
+
 .submitted > div{
-     color: #76546C;
      background-color: rgba(255,255,255, 0.1);
 }
 
@@ -565,6 +584,40 @@ thead td::after{
 
 }
 /******************************************
+/* Login                   
+/*******************************************/
+#login{
+     padding: 10px 0px;
+     border-top: 10px solid rgba(211,211,211,.7);
+     border-bottom: 10px solid rgba(211,211,211,.7);
+     width: 450px;
+     margin: 15% auto 0px auto;
+}
+
+.loginBox{
+     padding: 3%;
+}
+.login{
+     border:none;
+     width: 75px;
+     height: 33px;
+     padding: 5px;
+     margin: 2% 30% 2% 0px;
+}
+.login:hover{
+     border: 3px solid #76546C;
+}
+#login-holder{
+     padding: 10%;
+     background: url('http://placekitten.com/1024/760');
+}
+#login h1{
+     margin: 10px;
+}
+#login input{
+     width:100%;
+}
+/******************************************
 /* Forms                   
 /*******************************************/
 label{
@@ -577,11 +630,8 @@ input{
      margin-bottom: 10px;
      padding: 5px;
 }
-label.error{
-     color: red;
-}
 input.error{
-     border: 2px solid red;
+     border: 2px solid #dc1944;
 }
 .submit-confirm{
      display: none;
@@ -623,7 +673,6 @@ input.error{
 
 .color-title-bar{
      padding: 5px;
-     background-color: #e3e3de;
 }
 #header-reversed-holder{
      padding: 20px;
@@ -645,10 +694,10 @@ input.error{
           border-bottom: none;
           padding: 0px;
           /* slides the nav bar in and out*/
-           -moz-transition: all 0.3s;
-         -ms-transition: all 0.3s;
-         -o-transition: all 0.3s;
-         transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
      }
 
      nav.open{
@@ -662,8 +711,7 @@ input.error{
      }
 
      nav ul{
-/*          display: none;
-*/          width: 100%;
+          width: 100%;
           overflow: hidden;
           padding: 0px;
           margin: 0px;
@@ -729,7 +777,7 @@ input.error{
           display: inline-block;
      }
      nav ul li:hover ul li ul li ul li a{
-          color: black;
+          color: #000;
      }
      nav .fa-search{
           margin-left: 20px;
@@ -739,7 +787,7 @@ input.error{
      }
      nav ul li ul li a:hover
      , nav ul li ul li ul li ul li a:hover{
-          color: red;
+          color: #dc1944;
      }
      .show,
      nav .close-btn.show{

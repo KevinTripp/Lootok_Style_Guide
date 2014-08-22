@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	//Expands and retracts the search bar when it becomes selected.
+
 	$('nav input').on('focus',function(){
 		
 		$(this).attr('data-default', $(this).width());
