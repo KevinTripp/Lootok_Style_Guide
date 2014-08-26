@@ -4,7 +4,7 @@ $(document).ready(function(){
 	$('nav input').on('focus',function(){
 		
 		$(this).attr('data-default', $(this).width());
-		$(this).animate({ width: 115 }, 'fast');
+		$(this).animate({ width: 250 }, 'fast');
 	}).on('blur', function(){
 		var w = $(this).attr('data-default');
 		$(this).animate({width: w }, 'fast');

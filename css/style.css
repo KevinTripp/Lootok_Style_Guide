@@ -48,25 +48,31 @@ body {
      line-height: 1.4;
      font-family: "Times New Roman", Arial, sans-serif;
 }
-
   h1
 , h2
 , h3
-, .feature-headline
 , nav
+, .feature-headline
 , .faq-holder
-, .chart-label
-, .service-label
-, .leader-label
 , .status-container
 , .tag{
      font-family: "franklin-gothic-urw-comp";
-}
-nav ul li ul li a
-, .feature-headline p{
-     font-family: times, arial, sans-serif;
+     font-weight: 700;
 }
 
+.chart-label
+, .service-label
+, .leader-label
+, .tab-label {
+     font-family: "franklin-gothic-urw-comp";
+     font-weight: 400;
+}
+nav ul li ul li a
+, .feature-headline p
+, button{
+     font-family: times, arial, sans-serif;
+     font-weight: normal;
+}
 h1{
      font-size: 60px;
      line-height: 58px;
@@ -81,6 +87,9 @@ h2{
 h3{
      font-size: 28px;
      line-height: 28px;
+}
+button{
+     font-size: 18px;
 }
 nav
 ,.tab-label{
@@ -101,7 +110,6 @@ footer{
 , .chart-label-reversed{
      font-size: 14px;
 }
-
 .note{
      font-style: italic;  
 }
@@ -117,40 +125,26 @@ footer{
      width: 80%;
      margin: 0 auto;
 }
-
 section{
      margin:20px auto;
-     padding: 20px auto;
+     padding-bottom: 20px;
      border-bottom: 3px solid grey;
 }
-.secondary-2-border{
-     border-top: 10px solid #876a7d;
-}
-.light-gray-border{
-     border-top: 10px solid #f5f4f3;
-}
-.med-gray-border{
-     border-top: 10px solid #a7a5a0;
-     border-bottom: 10px solid #a7a5a0;
-}
-.box{
-     margin: 10px;
-     width: 50px;
-     height: 50px;
-     border: 1px solid black;
-}
-.color-title-bar{
-     text-transform: uppercase;
-}
 section h3{
-     padding-top: 40px;
+     padding-top: 20px;
      padding-bottom: 20px;
 }
-
+body ul{
+     list-style: disc;
+     padding-left: 40px;
+}
+body ol{
+     list-style: decimal;
+     padding-left: 40px;
+}
 /******************************************
 /* Header                   
 /*******************************************/
-
 header{
      width: 100%;
      padding:20px 0px;
@@ -160,14 +154,12 @@ header{
      border-left: 3px solid #cabcc4;
      border-right: 3px solid #cabcc4;
 }
-
 header h1
 , header h2
 , header h4
 , header h5 {
      padding: 0 0 20px 20px;
 }
-
 .breadcrumbs{
      padding: 20px 0 0 20px;
 }
@@ -191,13 +183,11 @@ footer .legal{
      width: 70%;
      float: left;
 }
-
 footer a
 ,footer a:visited
 ,footer a:hover{
      text-decoration: none;
 }
-
 /******************************************
 /* Nav                   
 /*******************************************/
@@ -217,31 +207,26 @@ nav ul{
      background-clip: padding-box;
      behavior: url(../../vendor/PIE-1.0.0/PIE.htc); 
 }
-
 nav ul li{
      display: inline-block;
      margin: 0px 20px 0px 0px;
 }
-
 nav ul li ul{
      display: none;
      position: absolute;
      width: 25%;
      margin-left: 0px;
      margin-bottom: 10px;
-/*     border: 10px solid rgba(245,244,243,.25);
-*/     border-top: 27px solid transparent;
+     border-top: 27px solid transparent;
 }
 nav ul li ul li{
      padding-left: 20px;
      margin: 10px 0px 0px 0px;
      width: 100%;
 }
-
 nav ul li:hover > ul{
      display: block;
 }
-
 nav ul li:hover > ul::before{
      border: 10px solid transparent;
      position: absolute;
@@ -252,11 +237,9 @@ nav ul li:hover > ul::before{
      top:-19px;
      left:20px;
 }
-
 nav ul li:hover a{
      text-decoration: none;
 }
-
 nav ul li a{
      text-transform: uppercase;
      text-decoration: none;
@@ -272,14 +255,13 @@ nav ul li:hover ul li > ul{
      padding-top: 5px;
      width: 100%;
 }
-
 li .fa-search{
      height: 30px;
      padding: 6px 3px 6px 3px;
 }
 nav input{
      border: none;
-     width: 50px;
+     width: 150px;
      height:30px;
      outline: none;
      font-size: 12px;
@@ -305,21 +287,17 @@ button{
      padding: 10px 10px 11px 10px;
      border: 3px solid #dc1944;
 }
-
 .secondary-btn{
      padding: 13px 13px 14px 13px;
      border: 3px solid #a7a5a0;
 }
-
 .hamburger{
      padding:5px;
      display: none;
-
 }
 nav .close-btn{
      display: none;
 }
-
 .hamburger div{
      border: 1.5px solid #fff;
      height: 1px;
@@ -328,7 +306,6 @@ nav .close-btn{
      margin-top: 4px;
      margin-left: 1px;
 }
-
 .close-btn{
      padding: 5px;
      padding: 4px;
@@ -352,7 +329,6 @@ nav .close-btn{
 , .slideshow-arrow-left.hover-arrow{
      border: 3px solid rgba(220,25,68,.6);
 }
-
 /******************************************
 /* Background Colors - Add the element that you want to recive the color to the list of elements for that background color               
 /*******************************************/
@@ -507,8 +483,19 @@ footer a
 .submitted > div{
      color: #76546C;
 }
-
-
+/******************************************
+/* BORDER COLORS                   
+/*******************************************/
+.secondary-2-border{
+     border-top: 10px solid #876a7d;
+}
+.light-gray-border{
+     border-top: 10px solid #f5f4f3;
+}
+.med-gray-border{
+     border-top: 10px solid #a7a5a0;
+     border-bottom: 10px solid #a7a5a0;
+}
 /******************************************
 /* TEXT SECTION                   
 /*******************************************/
@@ -523,6 +510,19 @@ footer a
      padding:20px;
      display: inline-block;
      text-align: center;
+}
+/******************************************
+/* BOX COLOR SETTINGS                   
+/*******************************************/
+
+.box{
+     margin: 10px;
+     width: 50px;
+     height: 50px;
+     border: 1px solid black;
+}
+.color-title-bar{
+     text-transform: uppercase;
 }
 /******************************************
 /* FAQ                   
@@ -575,16 +575,7 @@ section#faq a{
      padding: 10px;
      display: inline-block;
 }
-body ul{
-     list-style: disc;
-     list-style-position: inside;
-     padding-left: 20px;
-}
-body ol{
-     list-style: decimal;
-     list-style-position: inside;
-     padding-left: 20px;
-}
+
 /******************************************
 /* Status Containers              
 /*******************************************/
@@ -697,7 +688,7 @@ input.error{
      padding: 10px 0;
 }
 #submit-confirm-holder{
-     display: none;
+     border: none;
 }
 .overlay{
   display: none;
@@ -762,6 +753,7 @@ input.error{
           margin-top: 1%;
      }
      nav ul{
+          font-family: "franklin-gothic-urw-comp";
           width: 100%;
           overflow: hidden;
           margin: 0px;
@@ -797,6 +789,7 @@ input.error{
           left: 20px;
      }
      nav ul li ul li{
+          font-family: times;
           padding-left: 10px;
           padding-top: 30px;
           margin: 0px;
