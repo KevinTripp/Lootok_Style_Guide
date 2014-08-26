@@ -68,7 +68,8 @@ body {
 .chart-label
 , .service-label
 , .leader-label
-, .tab-label {
+, .tab-label
+, #login{
      font-family: "franklin-gothic-urw-comp";
      font-weight: 400;
 }
@@ -662,10 +663,10 @@ thead td::after{
      padding: 3%;
 }
 .login{
-     border:none;
+     border:3px solid #76546C;
      width: 75px;
      height: 33px;
-     padding: 5px;
+     padding: 3px;
      margin: 2% 30% 2% 0px;
 }
 .login:hover{
@@ -680,6 +681,9 @@ thead td::after{
 }
 #login input{
      width:100%;
+}
+#login .legal{
+     width: 100%;
 }
 /******************************************
 /* Forms                   
