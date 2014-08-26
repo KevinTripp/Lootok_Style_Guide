@@ -1,14 +1,14 @@
 $(document).ready(function(){
 	//Expands and retracts the search bar when it becomes selected.
 
-	$('nav input').on('focus',function(){
+	// $('nav input').on('focus',function(){
 		
-		$(this).attr('data-default', $(this).width());
-		$(this).animate({ width: 250 }, 'fast');
-	}).on('blur', function(){
-		var w = $(this).attr('data-default');
-		$(this).animate({width: w }, 'fast');
-	});
+	// 	$(this).attr('data-default', $(this).width());
+	// 	$(this).animate({ width: 250 }, 'fast');
+	// }).on('blur', function(){
+	// 	var w = $(this).attr('data-default');
+	// 	$(this).animate({width: w }, 'fast');
+	// });
 
 	$('nav .hamburger, nav .close-btn').on('click',function(){
 		if (!( $('nav').css('width') == $('body').css('width'))){

@@ -291,9 +291,12 @@ li .fa-search{
      height: 30px;
      padding: 6px 3px 6px 3px;
 }
+nav ul li:last-child{
+     width: 40%;
+}
 nav input{
      border: none;
-     width: 150px;
+     width: 90%;
      height:30px;
      outline: none;
      font-size: 12px;
