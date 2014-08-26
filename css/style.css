@@ -52,14 +52,18 @@ body {
   h1
 , h2
 , h3
-,.feature-headline
+, .feature-headline
 , nav
 , .faq-holder
 , .chart-label
-, .service-label{
-     font-family: "franklin gothic";
+, .service-label
+, .leader-label
+, .status-container
+, .tag{
+     font-family: "franklin-gothic-urw-comp";
 }
-nav ul{
+nav ul li ul li a
+, .feature-headline p{
      font-family: times, arial, sans-serif;
 }
 
@@ -78,7 +82,8 @@ h3{
      font-size: 28px;
      line-height: 28px;
 }
-nav{
+nav
+,.tab-label{
      font-size: 16px;
      line-height: 18px;
 }
@@ -115,9 +120,11 @@ footer{
 
 section{
      margin:20px auto;
+     padding: 20px auto;
+     border-bottom: 3px solid grey;
 }
 .secondary-2-border{
-     border-top: 10px solid #cabcc4;
+     border-top: 10px solid #876a7d;
 }
 .light-gray-border{
      border-top: 10px solid #f5f4f3;
@@ -381,7 +388,8 @@ nav .close-btn{
 .dark-gray{
      background-color: #535449;
 }
-.black{
+.black
+, .video-time{
      background-color: #000;
 }
 
@@ -391,7 +399,8 @@ nav .close-btn{
 , .close-btn
 , .hamburger
 , .hover
-, .primary-btn:hover{
+, .primary-btn:hover
+, .new-label{
      background-color: #dc1944;
 }
 .secondary-1{
@@ -427,17 +436,26 @@ nav .close-btn{
 /******************************************
 /* Font Colors                   
 /*******************************************/
+/* ? */
 footer a
 ,footer a:visited
 ,footer{
      color: #535449;
 }
-
-nav .top-nav
-,.secondary-btn {
+/* med grey */
+.f-med-gray
+, nav .top-nav
+, .secondary-btn
+, .leader-label
+, #login h1
+, footer a
+, footer a:visited
+, footer {
      color:#a7a5a0;
 }
-  .slideshow-arrow-left
+/* Primary Color */
+.f-primary-color
+,  .slideshow-arrow-left
 , .slideshow-arrow-right
 , .close-btn:hover
 , .close-btn-hover
@@ -450,6 +468,7 @@ nav .top-nav
      color: #dc1944;
 }
 
+/* White */
 .f-white
 , .submit-btn
 , .reversed a
@@ -468,13 +487,18 @@ nav .top-nav
 , .feature-headline
 , .login
 , .secondary-btn:hover
-, .primary-btn:hover{
+, .primary-btn:hover
+, .video-time
+, .new-label{
      color: #fff;
 }
+
 .login:hover{
      color: #76546C;
 }
-li .fa-search
+/* Black */
+.f-black
+, li .fa-search
 , nav a
 , #content a:visited
 , .link-visited{
@@ -511,7 +535,7 @@ section#faq a{
 .faq-holder{
      height: 225px;
      width: 225px;
-     padding-top: 80px;
+     padding-top: 72px;
        /* Safari 3-4, iOS 1-3.2, Android 1.6- */
      -webkit-border-radius: 50%; 
      /* Firefox 1-3.6 */
@@ -519,7 +543,7 @@ section#faq a{
      /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
      border-radius: 50%;
      behavior: url(../../vendor/PIE-1.0.0/PIE.htc); 
-     font-size: 72px;
+     font-size: 120px;
      line-height: 72px;
      text-align: center;
 }
@@ -530,14 +554,18 @@ section#faq a{
 /******************************************
 /* WIDGETS                   
 /*******************************************/
-.chart-label{
-     font-size:14px;
+.tag{
+     padding: 8px 10px;
+     text-transform: uppercase;
+     display: inline-block;
 }
 .chart-label-reversed{
      padding: 9px 12px;
      width: 45px;
 }
-
+.leader-label{
+     letter-spacing: 3px;
+}
 .service-label{
      text-align: center;
      font-size: 22px;
@@ -545,6 +573,17 @@ section#faq a{
 .error-msg{
      background-color: rgba( 220, 25, 68, .1);
      padding: 10px;
+     display: inline-block;
+}
+body ul{
+     list-style: disc;
+     list-style-position: inside;
+     padding-left: 20px;
+}
+body ol{
+     list-style: decimal;
+     list-style-position: inside;
+     padding-left: 20px;
 }
 /******************************************
 /* Status Containers              
@@ -595,7 +634,6 @@ thead td::after{
      height: 0px;
      width: 0px;
      content: " ";
-
 }
 /******************************************
 /* Login                   
@@ -657,6 +695,9 @@ input.error{
      left: 25%;
      z-index: 4;
      padding: 10px 0;
+}
+#submit-confirm-holder{
+     display: none;
 }
 .overlay{
   display: none;
@@ -758,7 +799,7 @@ input.error{
      nav ul li ul li{
           padding-left: 10px;
           padding-top: 30px;
-          margin: 0px
+          margin: 0px;
      }
      nav ul li ul li:first-child{
           padding-top: 20px;
@@ -769,7 +810,7 @@ input.error{
           padding-top: 30px
      }
 
-     nav ul li:hover ul li ul{
+     nav ul li:hover ul li ul:hover{
           display: block;
           position: static;
           font-style: italic;
