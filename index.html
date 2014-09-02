@@ -14,8 +14,8 @@
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/reset.css">
-		<link href="vendor/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/style.css">
+ 		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.3.7/slick.css"/>	
+ 		<link rel="stylesheet" href="css/style.css">
 		<script type="text/javascript" src="//use.typekit.net/fcd4zdj.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=none">
@@ -24,11 +24,12 @@
 
 	<body>
 		<header>
-			<nav>
-				<div class="top-nav clearfix">
-					<h1 id="top-logo" class="alignleft"><span>lootok</span></h1>
-					<div class="user-info alignright">
-						Sally McPearson
+				<div class="top-nav-container">
+					<div class="top-nav clearfix">
+						<h1 class="logo alignleft"><span>lootok</span></h1>
+						<div class="user-info alignright">
+							Sally McPearson
+						</div>
 					</div>
 				</div>
 				<div class="nav-buttons">
@@ -41,9 +42,10 @@
 						<i class="fa fa-lg fa-times"></i>
 					</div>
 				</div>
+			<nav>
 				<ul class="nav-menu hide">
 					<li>
-						<a href="#">sites & plans</a>
+						<a href="#">sites &amp; plans</a>
 						<ul>
 							<li>
 								<a href="#">online learning</a>
@@ -88,15 +90,16 @@
 					</li>
 					<li><a href="#">news & events</a></li>
 					<li><a href="#">help</a></li>
-					<li><i class="fa fa-search"></i><input type="text"></li>
+					<li><input type="text"></li>
 				</ul>
 			</nav>
-			<div class="banner">
-				<div class="breadcrumbs">
-							<a href="#">Home</a> > <a href="#">Site</a> > <a href="#">Munich</a>
-							<p>
+			<div class="banner-container">
+				<div class="banner">
+					<div class="breadcrumbs">
+						<a href="#">Home</a> > <a href="#">Site</a> > <a href="#">Munich</a>
+					</div>
+					<h2>Lootok Style Guide</h2>
 				</div>
-				<h2>Lootok Style Guide</h2>
 			</div><!-- End Banner -->
 		</header>
 		<div id="container">
@@ -109,11 +112,9 @@
 						<button class="submit-btn">Submit for approval</button>
 					</div>
 					<div class="status-container submitted secondary-2-border">
-						<div><i class="fa fa-check fa-3x"></i></div>
 						<p>Submitted for approval</p>
 					</div>
 					<div class="status-container approved secondary-2-border">
-						<div><i class="fa fa-check fa-3x"></i></div>
 						<p>Approved!</p>
 					</div>
 				</section>
@@ -260,23 +261,21 @@
 					</div><!-- End Tags -->
 					<div class="buttons">
 						<h3>Buttons</h3>
-						<div class="slideshow-arrow-left"><i class="fa fa-2x fa-caret-left"></i></div>
-						<div class="slideshow-arrow-right"><i class="fa fa-2x fa-caret-right"></i></div>
+						<div class="slideshow-arrow-left"></div>
+						<div class="slideshow-arrow-right"></div>
 						<div><p>Slide Show Arrows Off - 60% primary color</p></div>
-						<div class="slideshow-arrow-left hover-arrow"><i class="fa fa-2x fa-caret-left"></i></div>
-					    <div class="slideshow-arrow-right hover-arrow"><i class="fa fa-2x fa-caret-right"></i></div>
+						<div class="slideshow-arrow-left hover-arrow"></div>
+					    <div class="slideshow-arrow-right hover-arrow"></div>
 					    <div>
 					    	<p>Slide Show Arrows Hover - 3px stroke 60% primary color</p>
 					    </div>
 					</div> <!-- End style arrows -->			<div class="style-close-button">
 						<div class="close-btn">
-							<i class="fa fa-lg fa-times"></i>
 						</div>
 						<div>
 							<p>Close Button Off - Background primary color color white</p>
 						</div>
 						<div class="close-btn close-btn-hover">
-							<i class="fa fa-lg fa-times"></i>
 						</div>
 						<div>
 							<p>Close Button Hover - Background white color primary</p>
@@ -356,7 +355,7 @@
 						 <label for="email">Email:</label>
 						 <input type="text" name="email">
 						<label for="password">Password:</label>
-						<input type="text" name="password">
+						<input type="password" name="password">
 					</div>
 					<div class="textfield">
 						<div class="error-msg">feugiat donec nibh mauris, elementum in, vestibulum 
@@ -367,18 +366,18 @@
 					<div class="radio">
 						<label for="radio">Select a thing:</label>
 						<div>
-							<input type="radio" name="radio" value="thing1">thing1
-							<input type="radio" name="radio" value="thing2">thing2
+							<input type="radio" name="radio" value="thing1" id="thing1">thing1</br>
+							<input type="radio" name="radio" value="thing2" id="thing2">thing2</br>
 						</div>
 					<div class="check">
 						<label for="check">Select a thing:</label>
 						<div>
-							<input type="checkbox" name="check" value="thing1">thing1
-							<input type="checkbox" name="check" value="thing2">thing2
+							<input type="checkbox" name="check" value="thing1" id="thing1">thing1</br>
+							<input type="checkbox" name="check" value="thing2" id="thing1">thing2</br>
 						</div>
 					<div class="select">
-						<label for="car">Select a car!</label>	
-						<select name-"car">
+						<label for="car" class="required">Select a car!</label>	
+						<select name="car">
 						  <option value="volvo">Volvo</option>
 						  <option value="saab">Saab</option>
 						  <option value="mercedes">Mercedes</option>
@@ -398,7 +397,6 @@
 					<div class="overlay"></div>
 					<div class="submit-confirm med-gray clearfix">
 						<div class="close-btn">
-							<i class="fa fa-lg fa-times"></i>
 						</div>
 						<h3 class="light-gray">Form Completed</h3>
 						<p class="white">
@@ -408,11 +406,11 @@
 				</section><!-- end submit confirm holder -->
 				<section id="login-holder">
 					<div id="login">
-						<h1>lootok</h1>
+						<h1 class="logo"><span>lootok</span></h1>
 						<div class="loginBox">
 							<h2>Welcome to the Lootok Business Continuity Portal</h2>
-							<input class ="username" placeholder="Username">
-							<input class="password" placeholder="Password">
+							<input type="text" name="username" class ="username" placeholder="Username">
+							<input type="password" name="password" class="password" placeholder="Password">
 							<button class="login">Log in</button>
 							<span>
 								<a href="#">Register</a> | <a href="#">Forgot your password?</a>
@@ -423,13 +421,98 @@
 						</footer>
 					</div><!-- End Login Box -->
 				</section><!-- Login Section -->
+				<section id="carousel-holder">
+				<div class="carousel">
+				    <div><img src="img/lootok-logo.jpg"></div>
+				    <div><img src="img/lootok-logo.jpg"></div>
+				    <div><img src="img/lootok-logo.jpg"></div>
+				    <div><img src="img/lootok-logo.jpg"></div>
+				    <div><img src="img/lootok-logo.jpg"></div>
+				    <div><img src="img/lootok-logo.jpg"></div>
+				</div><!-- Carousel -->
+				</section><!-- Carousel Holder -->
+				<section id="side-nav-holder">
+					<div class="content clearfix">
+					<div class="side-nav">
+						<h4>Asset Conversation Manual</h4>
+						<ul>
+							<li>
+								<a href="#">nav element 1</a>
+								<ul>
+									<li><a href="#">sub nav element 1</a></li>
+									<li><a href="#">sub nav element 2</a></li>
+									<li><a href="#">sub nav element 3</a></li>
+									<li><a href="#">sub nav element 4</a></li>
+									<li><a href="#">sub nav element 5</a></li>
+									<li><a href="#">sub nav element 6</a></li>
+								</ul>
+							</li>
+							<li><a href="#">nav element 2</a></li>
+							<li><a href="#">nav element 3</a></li>
+							<li><a href="#">nav element 4</a></li>
+							<li><a href="#">nav element 5</a></li>
+							<li>
+								<a href="#">nav element 6</a>
+								<ul>
+									<li><a href="#">sub nav element 1</a></li>
+									<li><a href="#">sub nav element 2</a></li>
+									<li><a href="#">sub nav element 3</a></li>
+									<li><a href="#">sub nav element 4</a></li>
+									<li><a href="#">sub nav element 5</a></li>
+									<li>
+										<a href="#">sub nav element 6</a>
+										<ul>
+											<li><a href="#">sub nav element 1</a></li>
+											<li><a href="#">sub nav element 2</a></li>
+											<li><a href="#">sub nav element 3</a></li>
+											<li><a href="#">sub nav element 4</a></li>
+											<li><a href="#">sub nav element 5</a></li>
+											<li><a href="#">sub nav element 6</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="main-content">
+							<h3>feugiat donec nibh mauris</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+							<div class="ordered-list">
+								<h3>feugiat donec nibh mauris</h3>
+								<p>Lorem ipsum dolor sit amet, in feugiat donec nibh mauris, elementum in, vestibulum in vestibulum inceptos odio vestibulum. Euismod mollis nec aliquam lectus, quam in dolor malesuada enim, erat ante ut venenatis aliquam hac mauris. Enim suspendisse, sed maecenas laoreet, duis molestie, nam ligula at at integer dolor lorem, dui nullam pellentesque justo arcu morbi.</p>
+								<ol>
+									<li>Alabama</li>
+									<li>Alaska - orem ipsum dolor sit amet, in feugiat donec nibh mauris, orem ipsum dolor sit amet, in feugiat donec nibh mauris, orem ipsum dolor sit amet, in feugiat donec nibh mauris</li>
+									<li>New York</li>
+									<li>Ohio</li>
+									<li>Zanzabar</li>
+								</ol>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>					
+					</div><!-- End Main Content -->
+				</div><!-- End Content -->
+				</section><!-- End Side Nav Holder -->
 		</div><!-- #container -->
 		<footer class="clearfix">
-			<div class="legal"><span>&copy; 2014 Lootok</span><span></span><a href="#"> Terms and conditions</a></span><span><a href="#">Privacy Policy</a></span></div>
-			<div class="branding">Powered by <a href="#">lootok <i class="fa fa-circle-o"></i>  <i class="fa fa-circle-o"></i>&nbsp;&nbsp;&nbsp; <i class="fa fa-circle-o"></i></a></div>
+			<div class="legal"><span>&copy; 2014 Lootok LTD</span><span></span><a href="#"> Terms and conditions</a></span><span><a href="#">Privacy Policy</a></span></div>
+			<div class="branding">Powered by <a href="#">Lootok</a></div><div class="O-img"></div>
 		</footer>
 		<script src="//code.jquery.com/jquery-latest.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script type="text/javascript" src="vendor/slick-master/slick/slick.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

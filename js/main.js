@@ -9,7 +9,58 @@ $(document).ready(function(){
 	// 	var w = $(this).attr('data-default');
 	// 	$(this).animate({width: w }, 'fast');
 	// });
+/***********************************************
+/ SIDE-NAV 
+/***********************************************/
+	$('.side-nav ul li, .side-nav ul li').on('click', function(e){
+		var $this = $(this);
+		//stops the normal link action from occuring.  this might need to be taken out depending on how you want the list to occur in the future
+		e.preventDefault();
+		//allows for nested lists by preventing the click to register for the parent element as well as the element that was clicked on
+		e.stopPropagation();
+		//selects ul within the element you clicked and expands the list
+			//only adds the class active if the element has sub-elements
+			if($this.children().length > 1){
+				//gives the clicked on element the active or not active class.  the active class has a few styles that help 
+				$this.children('ul').slideToggle();
+				$this.toggleClass('active');
+				//when an element is clicked this hides all children elements that were active
+				$this.find('.active').removeClass('active');
+			}
+	});	
+/***********************************************
+/ SLICK Carousel
+/***********************************************/
 
+	$('.carousel').slick({
+	  centerMode: true,
+	  centerPadding: '15%',
+	  slidesToShow: 3,
+	  slidesToScroll:1,
+	  useCSS:false,
+	  responsive: [
+	    {
+	      breakpoint: 768,
+	      settings: {
+	        arrows: false,
+	        centerMode: true,
+	        centerPadding: '40px',
+	        slidesToShow: 3
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        arrows: false,
+	        centerMode: true,
+	        centerPadding: '40px',
+	        slidesToShow: 1
+	      }
+	    }
+	  ]
+
+	});
+	
 	$('nav .hamburger, nav .close-btn').on('click',function(){
 		if (!( $('nav').css('width') == $('body').css('width'))){
 			$('nav ul').first().toggleClass('hide');//hides the ul when menu is collapsed

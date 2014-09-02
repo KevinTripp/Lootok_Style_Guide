@@ -3,6 +3,49 @@ Project Name: Lootok Style Guide
 Client: Lootok
 Author: Kevin Tripp
 */
+
+/*****************************************
+/ FONT FACE
+/*****************************************/
+@font-face {
+    font-family: 'entypo';
+    src: url('../vendor/Entypo/@font-face/Entypo @font-face/entypo.eot');
+    src: url('../vendor/Entypo/@font-face/Entypo @font-face/entypo.eot?#iefix') format('embedded-opentype'),
+         url('../vendor/Entypo/@font-face/Entypo @font-face/entypo.woff') format('woff'),
+         url('../vendor/Entypo/@font-face/Entypo @font-face/entypo.ttf') format('truetype'),
+         url('../vendor/Entypo/@font-face/Entypo @font-face/entypo.svg#entypo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'entypo-social';
+    src: url('../vendor/Entypo/@font-face/Entypo Social @font-face/entypo-social.eot');
+    src: url('../vendor/Entypo/@font-face/Entypo Social @font-face/entypo-social.eot?#iefix') format('embedded-opentype'),
+         url('../vendor/Entypo/@font-face/Entypo Social @font-face/entypo-social.woff') format('woff'),
+         url('../vendor/Entypo/@font-face/Entypo Social @font-face/entypo-social.ttf') format('truetype'),
+         url('../vendor/Entypo/@font-face/Entypo Social @font-face/entypo-social.svg#entypo-social') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face     {
+    font-family: 'entypo-logo';
+    src:  url('../vendor/@font-face/Entypo/entypo-logo-webfont.eot');
+    src:  url('../vendor/@font-face/Entypo/entypo-logo-webfont.eot?#iefix') format('embedded-opentype'),
+          url('../vendor/@font-face/Entypo/entypo-logo-webfont.woff') format('woff'),
+          url('../vendor/@font-face/Entypo/entypo-logo-webfont.ttf') format('truetype'),
+          url('../vendor/@font-face/Entypo/entypo-logo-webfont.svg#entypo-logo') format('svg');
+   font-weight: normal;
+   font-style: normal;
+
+}
+/*****************************************
+/ STANDARDIZING
+/*****************************************/
+
 * {
      -moz-box-sizing: border-box; /* Firexfox */
      -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
@@ -47,6 +90,14 @@ body {
      font-size: 18px;
      line-height: 1.4;
      font-family: "Times New Roman", Arial, sans-serif;
+     padding-top: 250
+}
+
+#container {
+     width: 1024px;
+     padding-top: 250px;
+     margin: 0 auto;
+     overflow: hidden
 }
   h1
 , h2
@@ -55,7 +106,8 @@ body {
 , .feature-headline
 , .faq-holder
 , .status-container
-, .tag{
+, .tag
+, .side-nav h4{
      font-family: "franklin-gothic-urw-comp";
      font-weight: 700;
      letter-spacing: 1.5px;
@@ -127,11 +179,6 @@ footer{
      text-decoration: underline;
 }
 
-.banner
-, #container {
-     width: 80%;
-     margin: 0 auto;
-}
 section{
      margin:20px auto;
      padding-bottom: 20px;
@@ -144,20 +191,20 @@ section h3{
 body ul{
      list-style: disc;
      padding-left: 40px;
+     padding-top: 45px;
 }
 body ol{
      list-style: decimal;
      padding-left: 40px;
+     padding-top: 45px;  
 }
 /******************************************
-/* Header                   
+/* Header Top-nav                   
 /*******************************************/
-header{
-     width: 100%;
-     padding:20px 0px;
-}
+
 .banner{
-     margin: 11% auto 0px auto;
+     width: 1024px;
+     margin: 0 auto;
      border-left: 3px solid #cabcc4;
      border-right: 3px solid #cabcc4;
 }
@@ -170,16 +217,16 @@ header h1
 .breadcrumbs{
      padding: 20px 0 0 20px;
 }
-h1#top-logo{
+h1.logo{
      background-image:url("../img/lootok-logo.jpg");
-     background-position: 0px 110px;
+     background-position: -13px 110px;
      height: 28px;
      width: 202px;
 }
-h1#top-logo:hover{
-     background-position: 0px -9px;
+h1.logo:hover{
+     background-position: -13px 229px;
 }
-h1#top-logo span{
+h1.logo span{
      display: none;
 }
 /******************************************
@@ -191,16 +238,28 @@ footer{
 }
 footer span{
      margin-left: 20px;
-
 }
+
 footer .branding{
      font-style:italic; 
-     float:right;
-     width: 30%;
+     float:left;
+     padding-top: 5px;
+     margin-left: 13.5%;
 }
 footer .legal{
-     width: 70%;
+     width: 50%;
      float: left;
+     margin-left: 8%;
+}
+footer .O-img{
+     float:left;
+     background-image:url("../img/lootok-logo.jpg");
+     background-position: -32px 196px;
+     height: 28px;
+     width: 135px;
+}
+footer .O-img:hover{
+     background-position: -32px 230px;
 }
 footer a
 ,footer a:visited
@@ -210,27 +269,32 @@ footer a
 /******************************************
 /* Nav                   
 /*******************************************/
-nav {
+header{
      position: fixed;
      top:0px;
      width: 100%;
      border-bottom: 10px solid rgba(245,244,243,.25);
+     z-index: 1;
 }
-nav div.top-nav{
+header div.top-nav-container{
      width: 100%;
+}
+header div.top-nav{
+     width: 1024px;
      margin: 0 auto;
-     padding: 10px 12%;
+     padding-top: 25px;
+     padding-bottom: 20px;
 }
-nav div.top-nav .user-info{
-     padding-top: 10px;
+header div.top-nav .user-info{
+     padding-top: 3px;
 }
-nav div.top-nav #top-logo{
+header div.top-nav #top-logo{
      margin-top: 5px;
 }
-
-
 nav ul{
-     margin: 0px 10%;
+     width: 1024px;
+     margin: 0px auto;
+     padding: 0px;
 }
   nav
 , nav ul li:hover ul{
@@ -243,10 +307,13 @@ nav ul li{
      display: inline-block;
      margin: 0px 20px 0px 0px;
 }
+nav ul li:last-child{
+     width: 40%;
+}
 nav ul li ul{
      display: none;
      position: absolute;
-     width: 25%;
+     width: 20%;
      margin-left: 0px;
      margin-bottom: 10px;
      border-top: 27px solid transparent;
@@ -256,18 +323,11 @@ nav ul li ul li{
      margin: 10px 0px 0px 0px;
      width: 100%;
 }
+nav ul li ul li:last-child{
+     width: 100%;
+}
 nav ul li:hover > ul{
      display: block;
-}
-nav ul li:hover > ul::before{
-     border: 10px solid transparent;
-     position: absolute;
-     border-bottom-color:#e3e3de;
-     height: 0px;
-     width: 0px;
-     content: " ";
-     top:-19px;
-     left:20px;
 }
 nav ul li:hover a{
      text-decoration: none;
@@ -287,19 +347,18 @@ nav ul li:hover ul li > ul{
      padding-top: 5px;
      width: 100%;
 }
-li .fa-search{
-     height: 30px;
-     padding: 6px 3px 6px 3px;
-}
-nav ul li:last-child{
-     width: 40%;
-}
 nav input{
      border: none;
      width: 90%;
      height:30px;
      outline: none;
      font-size: 12px;
+}
+nav ul li:last-child:before{
+     font-family: 'entypo';
+     content: '\1F50D';
+     font-size: 23px;
+     padding: 2px 3px 5.5px 3px;
 }
 /******************************************
 /*  Buttons                
@@ -321,7 +380,7 @@ button{
      padding:5px;
      display: none;
 }
-nav .close-btn{
+header .close-btn{
      display: none;
 }
 .hamburger div{
@@ -333,26 +392,56 @@ nav .close-btn{
      margin-left: 1px;
 }
 .close-btn{
-     padding: 5px;
-     padding: 4px;
      display: inline-block;
-     font-size: 12px;
+     font-size: 40px;
      border: 3px solid #dc1944;
+}
+.close-btn:after{
+     font-family: 'entypo';
+     content: '\274E';
+     color: red;
+     background-color: white;
 }
 .close-btn:hover{
      border: 3px solid #dc1944;
 }
-  .slideshow-arrow-left
-, .slideshow-arrow-right{
-     font-size: 15px;
-     display: inline-block;
-     padding: 3px 10px 1px 11px;
+ .slick-next
+, .slick-prev
+, .slick-next:before
+, .slick-prev:before
+, .slideshow-arrow-left
+, .slideshow-arrow-right
+, .slideshow-arrow-left:after
+, .slideshow-arrow-right:after{
+     display:inline-block;
+     padding: 0px 10px 0px 11px;
      border: 3px solid transparent;
+}
+.slick-prev{
+     left:0px;
+}
+.slick-next{
+     right:0px;
+}
+.slick-next:before
+,.slideshow-arrow-right:after{
+     font-size: 30px;
+     font-family: 'entypo';
+     content:'\25B8'; 
+     speak:none;
+}
+.slick-prev:before
+, .slideshow-arrow-left:after{
+     font-size: 30px;
+     font-family: 'entypo';
+     content: '\25c2';
 }
   .slideshow-arrow-left:hover
 , .slideshow-arrow-right:hover
 , .slideshow-arrow-right.hover-arrow
-, .slideshow-arrow-left.hover-arrow{
+, .slideshow-arrow-left.hover-arrow
+, .slick-next:hover:before
+, .slick-prev:hover:before{
      border: 3px solid rgba(220,25,68,.6);
 }
 /******************************************
@@ -363,22 +452,25 @@ nav .close-btn{
 , .close-btn-hover
 , .close-btn:hover
 , .hamburger div
-, nav .top-nav
+, header .top-nav
 , .loginBox
-, .login:hover{
+, .login:hover
+, header div.top-nav-container{
      background-color: #fff;
 }
 .pale-gray
 ,nav input
-,li .fa-search{
+,nav ul li:last-child:before{
      background: #f2f1ef;
 }
 .light-gray
 , nav
+, header
 , table
 , nav ul li ul
 , .color-title-bar
-, #login{
+, #login
+, .side-nav h4{
      background-color: #e3e3de;
 }
 .med-gray
@@ -405,6 +497,14 @@ nav .close-btn{
 , .new-label{
      background-color: #dc1944;
 }
+/* 10% primary color */
+.side-nav ul li ul li
+, .error-msg{
+     background-color: rgba( 220, 25, 68, .1);
+}
+.side-nav ul li ul li ul li{
+     background-color: rgba( 220, 25, 68, 0);
+}
 .secondary-1{
      background-color: #EDB521;
 }
@@ -412,8 +512,9 @@ nav .close-btn{
 , .chart-label-reversed
 , .status-container
 , .reversed
-, header
-, .login{
+, .banner
+, .login
+, header .banner-container{
      background-color: #76546C;
 }
 .tertiary-1{
@@ -457,7 +558,7 @@ footer a
 }
 /* Primary Color */
 .f-primary-color
-,  .slideshow-arrow-left
+, .slideshow-arrow-left
 , .slideshow-arrow-right
 , .close-btn:hover
 , .close-btn-hover
@@ -466,10 +567,14 @@ footer a
 , a
 , label.error
 , .error-msg
-, footer a:hover{
+, footer a:hover
+, .slick-prev
+, .slick-next
+, .slick-prev:before
+, .slick-next:before
+, .side-nav ul li a:hover{
      color: #dc1944;
 }
-
 /* White */
 .f-white
 , .submit-btn
@@ -480,7 +585,7 @@ footer a
 , .secondary-btn:hover
 , .hover
 , .primary-btn:hover
-, .banner a
+, .breadcrumbs a
 , header
 , .status-container
 , .approved > div
@@ -500,7 +605,7 @@ footer a
 }
 /* Black */
 .f-black
-, li .fa-search
+, nav ul li:last-child:before
 , nav a
 , #content a:visited
 , .link-visited
@@ -516,7 +621,8 @@ footer a
 .secondary-2-border{
      border-top: 10px solid #876a7d;
 }
-.light-gray-border{
+.light-gray-border
+, .side-nav{
      border-top: 10px solid #f5f4f3;
 }
 .med-gray-border{
@@ -588,7 +694,7 @@ section#faq a{
 }
 .chart-label-reversed{
      padding: 9px 12px;
-     width: 45px;
+     display: inline;
 }
 .leader-label{
      letter-spacing: 3px;
@@ -598,7 +704,6 @@ section#faq a{
      font-size: 22px;
 }
 .error-msg{
-     background-color: rgba( 220, 25, 68, .1);
      padding: 10px;
      display: inline-block;
 }
@@ -607,9 +712,10 @@ section#faq a{
 /*******************************************/
 .status-container{
      padding: 20px;
-     width: 200px;
-     margin:10px;
+     width: 20%;
+     margin:10px 0 0 80%;
      font-size: 20px;
+     display: inline-block;
 }
 .approved > div
 , .submitted > div{
@@ -657,7 +763,7 @@ thead td::after{
      border-top: 10px solid rgba(211,211,211,.7);
      border-bottom: 10px solid rgba(211,211,211,.7);
      width: 550px;
-     margin: 15% auto 0px auto;
+     margin: 0 auto;
      -mox-background-clip: padding-box;
      -webkit-background-clip: padding-box;
      background-clip: padding-box;
@@ -676,8 +782,10 @@ thead td::after{
      border: 3px solid #76546C;
 }
 #login-holder{
-     padding: 10%;
-     background: url('http://placekitten.com/1024/760');
+     width: 100%;
+     height: 960px;
+     background: url('http://placekitten.com/1280/760');
+     background-size: cover;
 }
 #login h1{
      margin: 10px;
@@ -693,23 +801,31 @@ thead td::after{
 /*******************************************/
 label{
      font-weight: bold;
+     margin-top: 25px;
      display: block;
 }
 input{
      border: 2px solid #f2f1ef;
-     margin-top: 20px;
-     margin-bottom: 10px;
+     margin: 10px 10px 10px 0;
      padding: 5px;
 }
 input.error{
      border: 2px solid #dc1944;
 }
+textarea{
+     width: 100%;
+     padding: 5px;
+}
+
+.required:after{
+     content: " *"
+}
 .submit-confirm{
      display: none;
      width: 50%;
      position: fixed;
-     top: 25%;
      left: 25%;
+     top: 0;
      z-index: 4;
      padding: 10px 0;
 }
@@ -739,6 +855,96 @@ input.error{
      padding: 20px;
 }
 /******************************************
+/* SIDE NAV   
+/*******************************************/
+.side-nav{
+     width: 25%;
+     float: left;
+}
+.main-content{
+     float:right;
+     width: 74%;
+}
+.side-nav h4{
+     padding: 10px;
+}
+.side-nav ul{
+     list-style: none;
+     padding-top: 0px;
+     padding-left: 0px;
+}
+.side-nav ul li{
+     position: relative;
+     padding: 10px 0px;
+     border-bottom: 2px solid gray;
+}
+.side-nav ul li:before{
+     /* creates the 'nav' arrows */
+     border: 6px solid transparent;
+     position: absolute;
+     border-left-color: black;
+     height: 0px;
+     width: 0px;
+     content: "";
+     display: inline-block;
+     left: 6px;
+     margin-top: 7px;
+}
+.side-nav ul li.active:before{
+     /* changes direction of the arrow*/
+     border-left-color:transparent;
+     border-top-color:red; 
+     left: 3px;
+}
+.side-nav ul li ul li:before{
+     /* removes arrows from anything below the main ul container */
+     border: none;
+}
+.side-nav ul li:first-child{
+     border-top: 2px solid gray;
+}
+.side-nav ul li a{
+     color: black;
+     text-decoration: none;
+     text-transform: capitalize;
+}
+.side-nav ul li a{
+     padding-left: 20px;
+     display: inline-block;
+}
+  .side-nav ul li ul
+, .side-nav ul li ul li ul{
+     display: none;
+}
+.side-nav ul li ul li{
+     border:none;
+     padding-left: 0px;
+     font-style: italic;
+}
+.side-nav ul li.active ul li:first-child{
+     border: none;
+}
+.side-nav ul li ul li a{
+     margin-left:15px;
+}
+.side-nav ul li.active{
+     border: none;
+     padding-bottom: 0px;
+}
+.side-nav ul li ul li ul{
+     list-style: decimal;
+     list-style-position: inside;
+}
+.side-nav ul li ul li ul li{
+     padding-left: 35px;
+}
+.side-nav ul li ul li ul li a {
+     /* removes the padding introduced to align the first and second lists*/
+     margin: 0px;
+     padding-left: 5px;
+}
+
+/******************************************
 /* ADDITIONAL STYLES                   
 /*******************************************/
 .color-title-bar{
@@ -754,7 +960,7 @@ input.error{
 /* For tablets */
 @media only screen and (max-width : 768px) {
      nav{
-          width: 6%;
+          width: 0;
           top:0;
           right: 0;
           position: fixed;
@@ -802,17 +1008,6 @@ input.error{
           background-color: #f5f4f3; 
           overflow: visible;
      }
-     nav ul li:hover > ul::before{
-          border: 10px solid transparent;
-          position: absolute;
-          display: block;
-          border-bottom-color:#f5f4f3; 
-          height: 0px;
-          width: 0px;
-          content: " ";
-          top:-20px;
-          left: 20px;
-     }
      nav ul li ul li{
           font-family: times;
           padding-left: 10px;
@@ -822,19 +1017,16 @@ input.error{
      nav ul li ul li:first-child{
           padding-top: 20px;
      }
-
      nav ul li ul li ul li{
           padding-left: 20px;
           padding-top: 30px
      }
-
      nav ul li:hover ul li ul:hover{
           display: block;
           position: static;
           font-style: italic;
           width: 100%;
      }
-
      nav ul li:hover ul li ul li ul li a{
           color: #000;
      }
@@ -849,7 +1041,7 @@ input.error{
           color: #dc1944;
      }
      .show,
-     nav .close-btn.show{
+     header .close-btn.show{
           display: inline-block;
           margin-left: 3%;
           margin-top: 5%;
