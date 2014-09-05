@@ -20,12 +20,18 @@ $(document).ready(function(){
 		e.stopPropagation();
 		//selects ul within the element you clicked and expands the list
 			//only adds the class active if the element has sub-elements
-			if($this.children().length > 1){
+			$this.children()
+			if ($this.children().length > 1) {
 				//gives the clicked on element the active or not active class.  the active class has a few styles that help 
 				$this.children('ul').slideToggle();
 				$this.toggleClass('active');
+				
+				if(!$this.hasClass('active')){
+					//slides up all sub menus if the parent menu is hidden
+					$this.find('ul li ul').slideUp()
+					$this.find('.active').removeClass('active');
+				}
 				//when an element is clicked this hides all children elements that were active
-				$this.find('.active').removeClass('active');
 			}
 	});	
 /***********************************************
@@ -33,31 +39,33 @@ $(document).ready(function(){
 /***********************************************/
 
 	$('.carousel').slick({
-	  centerMode: true,
-	  centerPadding: '15%',
-	  slidesToShow: 3,
+	  centerMode: false,
+	  centerPadding: '40px',
+	  slidesToShow: 2,
 	  slidesToScroll:1,
-	  useCSS:false,
-	  responsive: [
-	    {
-	      breakpoint: 768,
-	      settings: {
-	        arrows: false,
-	        centerMode: true,
-	        centerPadding: '40px',
-	        slidesToShow: 3
-	      }
-	    },
-	    {
-	      breakpoint: 480,
-	      settings: {
-	        arrows: false,
-	        centerMode: true,
-	        centerPadding: '40px',
-	        slidesToShow: 1
-	      }
-	    }
-	  ]
+	  infinite:false,
+	  // autoplay:true,
+	  autoplaySpeed:1000
+	  // responsive: [
+	  //   {
+	  //     breakpoint: 768,
+	  //     settings: {
+	  //       arrows: false,
+	  //       centerMode: true,
+	  //       centerPadding: '40px',
+	  //       slidesToShow: 3
+	  //     }
+	  //   },
+	  //   {
+	  //     breakpoint: 480,
+	  //     settings: {
+	  //       arrows: false,
+	  //       centerMode: true,
+	  //       centerPadding: '40px',
+	  //       slidesToShow: 1
+	  //     }
+	  //   }
+	  // ]
 
 	});
 	

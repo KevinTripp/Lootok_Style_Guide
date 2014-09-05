@@ -7,7 +7,7 @@ Author: Kevin Tripp
 /*****************************************
 / FONT FACE
 /*****************************************/
-@font-face {
+/*@font-face {
     font-family: 'entypo';
     src: url('../vendor/Entypo/@font-face/Entypo @font-face/entypo.eot');
     src: url('../vendor/Entypo/@font-face/Entypo @font-face/entypo.eot?#iefix') format('embedded-opentype'),
@@ -41,7 +41,7 @@ Author: Kevin Tripp
    font-weight: normal;
    font-style: normal;
 
-}
+}*/
 /*****************************************
 / STANDARDIZING
 /*****************************************/
@@ -218,13 +218,12 @@ header h1
      padding: 20px 0 0 20px;
 }
 h1.logo{
-     background-image:url("../img/lootok-logo.jpg");
-     background-position: -13px 110px;
-     height: 28px;
-     width: 202px;
+     background-image:url("../img/logos/lootok-logo-off.png");
+     height: 25px;
+     width: 185px;
 }
 h1.logo:hover{
-     background-position: -13px 229px;
+     background-image:url("../img/logos/lootok-logo-on.png");
 }
 h1.logo span{
      display: none;
@@ -243,8 +242,8 @@ footer span{
 footer .branding{
      font-style:italic; 
      float:left;
-     padding-top: 5px;
-     margin-left: 13.5%;
+     padding-top: 2px;
+     margin-left: 6.5%;
 }
 footer .legal{
      width: 50%;
@@ -253,13 +252,13 @@ footer .legal{
 }
 footer .O-img{
      float:left;
-     background-image:url("../img/lootok-logo.jpg");
-     background-position: -32px 196px;
-     height: 28px;
-     width: 135px;
+     margin-left: 5px;
+     background-image:url("../img/logos/lootok-logo-off.png");
+     height: 25px;
+     width: 185px;
 }
 footer .O-img:hover{
-     background-position: -32px 230px;
+     background-image:url("../img/logos/lootok-logo-on.png");
 }
 footer a
 ,footer a:visited
@@ -275,9 +274,13 @@ header{
      width: 100%;
      border-bottom: 10px solid rgba(245,244,243,.25);
      z-index: 1;
+     background-clip: content-box;
 }
 header div.top-nav-container{
      width: 100%;
+}
+header div.banner-container{
+     padding: 10px 0px;
 }
 header div.top-nav{
      width: 1024px;
@@ -353,12 +356,19 @@ nav input{
      height:30px;
      outline: none;
      font-size: 12px;
+     margin-left:0px;
 }
 nav ul li:last-child:before{
+     font-family: 'fontello';
+     content: '\e803';
+     font-size: 13px;
+     padding: 8px 3px 8.5px 8px;
+}
+nav ul li ul li:last-child:before{
      font-family: 'entypo';
-     content: '\1F50D';
-     font-size: 23px;
-     padding: 2px 3px 4.5px 3px;
+     content: '';
+/*     font-size: 23px;
+*/     padding: 0;
 }
 /******************************************
 /*  Buttons                
@@ -380,9 +390,6 @@ button{
      padding:5px;
      display: none;
 }
-header .close-btn{
-     display: none;
-}
 .hamburger div{
      border: 1.5px solid #fff;
      height: 1px;
@@ -392,70 +399,134 @@ header .close-btn{
      margin-left: 1px;
 }
 .close-btn{
+     height: 50px;
+     width: 50px;
      display: inline-block;
-     font-size: 40px;
-     border: 3px solid #dc1944;
 }
 .close-btn:after{
-     font-family: 'entypo';
-     content: '\274E';
-     color: red;
-     background-color: white;
+     font-family: 'fontello';
+     content: '\e815';  
+     border: 3px solid transparent;
+     font-size: 40px;
 }
-.close-btn:hover{
+.close-btn:hover:after{
+     font-family: 'fontello';
+     font-size: 40px;
+     content: '\e813';
      border: 3px solid #dc1944;
 }
- .slick-next
+
+header .close-btn{
+     display: none;
+}
+.submit-btn{
+     padding: 20px;
+}
+  .slick-next
 , .slick-prev
 , .slick-next:before
 , .slick-prev:before
 , .slideshow-arrow-left
 , .slideshow-arrow-right
-, .slideshow-arrow-left:after
-, .slideshow-arrow-right:after{
+, .slideshow-arrow-left:before
+, .slideshow-arrow-right:before{
      display:inline-block;
      padding: 0px 10px 0px 11px;
      border: 3px solid transparent;
+     height: auto;
+     width: auto;
 }
 .slick-prev{
      left:0px;
 }
 .slick-next{
-     right:0px;
+     right:38px;
 }
 .slick-next:before
-,.slideshow-arrow-right:after{
+,.slideshow-arrow-right:before{
      font-size: 30px;
-     font-family: 'entypo';
-     content:'\25B8'; 
-     speak:none;
+     font-family: 'fontello';
+     content:'\e885'; 
 }
 .slick-prev:before
-, .slideshow-arrow-left:after{
+, .slideshow-arrow-left:before{
      font-size: 30px;
-     font-family: 'entypo';
-     content: '\25c2';
+     font-family: 'fontello';
+     content: '\e884';
 }
-  .slideshow-arrow-left:hover
-, .slideshow-arrow-right:hover
-, .slideshow-arrow-right.hover-arrow
-, .slideshow-arrow-left.hover-arrow
+  .slideshow-arrow-left:hover:before
+, .slideshow-arrow-right:hover:before
+, .slideshow-arrow-left.hover-over:before
+, .slideshow-arrow-right.hover-over:before
 , .slick-next:hover:before
 , .slick-prev:hover:before{
      border: 3px solid rgba(220,25,68,.6);
+}
+
+/*******************************************/
+/* CAROUSEL
+/*******************************************/
+
+.carousel div{
+     position: relative;
+}
+.carousel div div.feature-headline{
+     position:absolute;
+}
+/*******************************************/
+/* SERVICES
+/*******************************************/
+.services{
+     width: 90%;
+     margin: 5% auto;
+}
+.service{
+     font-family: 'fontello';
+     padding-left: 23px;
+     padding-bottom: 15px;
+     width: 200px;
+     height: 200px;
+     display: inline-block;
+     margin: 10px;
+     font-size: 150px;
+}
+.service{
+     color: black;
+}
+.service:hover{
+     color: white;
+}
+.service.briefcase:before{
+     content: '\e8bb';
+}
+.service.globe:before{
+     content:'\e8b1';
+}
+.service.leaf:before{
+     content: '\e8b8';
+}
+.service.rocket:before{
+     content: '\e8dd';
+}
+.service.drop:before{
+     content: '\e8cd';
+     /* this centers the drop in the div */
+     margin-left: 33px;
+}
+.service.air:before{
+     content: '\e8ce';
 }
 /******************************************
 /* Background Colors - Add the element that you want to recive the color to the list of elements for that background color               
 /*******************************************/
 
 .white
-, .close-btn-hover
-, .close-btn:hover
 , .hamburger div
 , header .top-nav
 , .loginBox
 , .login:hover
-, header div.top-nav-container{
+, header div.top-nav-container
+, .close-btn:after{
      background-color: #fff;
 }
 .pale-gray
@@ -490,11 +561,11 @@ header .close-btn{
 .primary-color
 , .approved > div
 , .submit-btn
-, .close-btn
 , .hamburger
 , .hover
 , .primary-btn:hover
-, .new-label{
+, .new-label
+, .close-btn:hover:after{
      background-color: #dc1944;
 }
 /* 10% primary color */
@@ -514,7 +585,8 @@ header .close-btn{
 , .reversed
 , .banner
 , .login
-, header .banner-container{
+, header .banner-container
+, .service{
      background-color: #76546C;
 }
 .tertiary-1{
@@ -560,7 +632,7 @@ footer a
 .f-primary-color
 , .slideshow-arrow-left
 , .slideshow-arrow-right
-, .close-btn:hover
+, .close-btn:after
 , .close-btn-hover
 , .primary-btn
 , nav ul li ul li a:hover
@@ -580,7 +652,7 @@ footer a
 , .submit-btn
 , .reversed a
 , .reversed
-, .close-btn
+, .close-btn:hover:after
 , .secondary-hover
 , .secondary-btn:hover
 , .hover
@@ -732,9 +804,6 @@ section#faq a{
 .submitted > div{
      background-color: rgba(255,255,255, 0.1);
 }
-.submit-btn{
-     padding: 20px;
-}
 /******************************************
 /* TABLE                   
 /*******************************************/
@@ -806,7 +875,7 @@ label{
 }
 input{
      border: 2px solid #f2f1ef;
-     margin: 10px 10px 10px 0;
+     margin: 10px 10px 10px 1px;
      padding: 5px;
 }
 input.error{
